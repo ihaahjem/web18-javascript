@@ -23,7 +23,7 @@
       function initMap(){
 
        var options = {
-                zoom:17,
+                zoom:15,
                 center:{lat:59.9161644,lng:10.7574865},
                 styles:[
     {
@@ -407,11 +407,9 @@
 
            for(i = 0; i < school.length; i++){
                 marker = new google.maps.Marker({
-
                     position: new google.maps.LatLng(school[i][1], school[i][2]),
-                    map: map
-                    icon: icon;
-
+                    map: map,
+                    icon: icon
                 });
 
                 google.maps.event.addListener(marker, 'click', (function(marker, i){
@@ -425,11 +423,7 @@
 
 
     </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Uv3zMYXiAqoCa8KBpqvBC75n9ARyxdI&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Uv3zMYXiAqoCa8KBpqvBC75n9ARyxdI&callback=initMap"
         async defer></script>
-
-<script src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=59.9161644,10.7574865&radius=1000types=food&keyword=cruise&key=AIzaSyBwiVZaZky-xtlIbRItukIgpqkOaGj6PnE&callback" async defer></script>
-
-
 </body>
 </html>
