@@ -387,7 +387,7 @@
 
         var map = new google.maps.Map(document.getElementById('map'), options);
 
-           var locations = [
+           var school = [
                 ['Campus Fjerdingen', 59.9161644, 10.7574865, 1],
                 ['Campus Vulkan', 59.9233391,10.7503081, 2],
                 ['Campus Brenneriveien', 59.920352, 10.7506041, 3],
@@ -405,16 +405,16 @@
 
            var marker, i;
 
-           for(i = 0; i < location.length; i++){
+           for(i = 0; i < school.length; i++){
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    position: new google.maps.LatLng(school[i][1], school[i][2]),
                     map: map
                     icon: icon;
                 });
 
                 google.maps.event.addListener(marker, 'click', (function(marker, i){
                     return function() {
-                        infowindow.setContent(locations[i][0]);
+                        infowindow.setContent(school[i][0]);
                         inforwindow.open(map, marker);
                     }
                 })(marker, i);
