@@ -22,9 +22,36 @@
 
       function initMap(){
 
+          var school = [
+              ['Campus Fjerdingen', 59.9161644, 10.7574865, 1],
+              ['Campus Vulkan', 59.9233391, 10.7503081, 2],
+              ['Campus Brenneriveien', 59.920352, 10.7506041, 3],
+              ['Campus Kvadraturen', 59.911015, 10.7439543, 4]
+          ];
+
+          var center = {
+              lat : 0,
+              lng : 0
+          };
+
+          findCenter();
+          console.log(center.lat + " " + center.lng);
+
+          function findCenter () {
+              for(let i = 0; i < school.length; i++){
+                  center.lat += school[i][1];
+                  center.lng += school[i][2];
+              }
+              center.lng = center.lng/4;
+              center.lat = center.lat/4;
+          };
+
        var options = {
                 zoom:15,
-                center:{lat:59.9161644,lng:10.7574865},
+                center: {
+                    lat: center.lat,
+                    lng: center.lng
+                },
                 styles:[
     {
         "featureType": "administrative",
@@ -386,13 +413,6 @@
 }
 
         var map = new google.maps.Map(document.getElementById('map'), options);
-
-           var school = [
-                ['Campus Fjerdingen', 59.9161644, 10.7574865, 1],
-                ['Campus Vulkan', 59.9233391,10.7503081, 2],
-                ['Campus Brenneriveien', 59.920352, 10.7506041, 3],
-                ['Campus Kvadraturen', 59.911015, 10.7439543, 4]
-           ];
 
            var iconBase='https://maps.google.com/mapfiles/kml/shapes/';
 
