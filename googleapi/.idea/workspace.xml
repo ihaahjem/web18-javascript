@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="409" column="55" lean-forward="true" selection-start-line="409" selection-start-column="55" selection-end-line="409" selection-end-column="55" />
+            <state relative-caret-position="-4974">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -30,7 +30,7 @@
             <state relative-caret-position="468">
               <caret line="130" column="24" lean-forward="true" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
               <folding>
-                <marker date="1527163847667" expanded="true" signature="16166:16208" ph="..." />
+                <marker date="1527164234969" expanded="true" signature="16170:16212" ph="..." />
               </folding>
             </state>
           </provider>
@@ -253,15 +253,15 @@
         <state relative-caret-position="468">
           <caret line="130" column="24" lean-forward="true" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
           <folding>
-            <marker date="1527163847667" expanded="true" signature="16166:16208" ph="..." />
+            <marker date="1527164234969" expanded="true" signature="16170:16212" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="409" column="55" lean-forward="true" selection-start-line="409" selection-start-column="55" selection-end-line="409" selection-end-column="55" />
+        <state relative-caret-position="-4974">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding />
         </state>
       </provider>
