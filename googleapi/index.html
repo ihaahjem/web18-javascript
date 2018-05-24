@@ -20,17 +20,8 @@
 
 <script>
 
-        function initMap(){
+       function initMap(){
 
-  /* var request = {
-        location: {lat:59.9161644,lng:10.7574865},
-        radius: 8847,
-        types: ['cafe']
-    };
-
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, callback);
-*/
        var options = {
                 zoom:17,
                 center:{lat:59.9161644,lng:10.7574865},
@@ -396,8 +387,12 @@
 
         var map = new google.maps.Map(document.getElementById('map'), options);
 
-
-
+           var locations = [
+                ['Campus Fjerdingen', 59.9161644, 10.7574865, 1],
+                ['Campus Vulkan', 59.9233391,10.7503081, 2],
+                ['Campus Brenneriveien', 59.920352, 10.7506041, 3],
+                ['Campus Kvadraturen', 59.911015, 10.7439543, 4]
+           ];
 
            var iconBase='https://maps.google.com/mapfiles/kml/shapes/';
 
@@ -406,23 +401,63 @@
                   url: 'sirkelmarker.png'
            };
 
-           var marker = new google.maps.Marker({
+           var infoWindow = new google.maps.InfoWindow();
+
+           var marker, i;
+
+           for(i = 0; i < location.length; i++){
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                    icon: icon;
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, i){
+                    return function() {
+                        infowindow.setContent(locations[i][0]);
+                        inforwindow.open(map, marker);
+                    }
+                })(marker, i);
+           }
+
+<!--
+           var iconBase='https://maps.google.com/mapfiles/kml/shapes/';
+
+           var icon = {
+                  scaledSize: new google.maps.Size(30,30),
+                  url: 'sirkelmarker.png'
+           };
+
+           var markerFjerdingen = new google.maps.Marker(
                 position:{lat:59.9161644,lng:10.7574865},
                 map:map,
                 icon: icon
             });
 
-
-
-
-            var infoWindow = new google.maps.InfoWindow({
-                content:'<h1>Campus Fjerdingen</h1>'
+            var markerVulkan = new google.maps.Marker(
+                position:{lat:59.9233391,lng:10.7503081},
+                map:map,
+                icon: icon
             });
+
+            var markerBrenneriveien = new google.maps.Marker(
+                position:{lat:59.920352,lng:10.7506041},
+                map:map,
+                icon: icon
+            });
+
+            var markerKvadraturen = new google.maps.Marker(
+                position:{lat:59.911015,lng:10.7439543},
+                map:map,
+                icon: icon
+            });
+
+            var infoWindow = new google.maps.InfoWindow();
 
             marker.addListener('click', function(){
-                infoWindow.open(map, marker);
+                infoWindow.open(map, markerFjerdingen);
             });
-            
+-->
 }
 
 
