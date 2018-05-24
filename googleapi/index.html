@@ -412,12 +412,18 @@
                     icon: icon
                 });
 
-                google.maps.event.addListener(marker, 'click', (function(marker, i){
+                google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
                     return function() {
                         infowindow.setContent(school[i][0]);
                         infowindow.open(map, marker);
                     }
                 })(marker, i))
+
+               google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
+                   return function() {
+                       infowindow.close(map, marker);
+                   }
+               })(marker, i))
            }
 
           if (navigator.geolocation) {
