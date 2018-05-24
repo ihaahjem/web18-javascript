@@ -415,10 +415,27 @@
                 google.maps.event.addListener(marker, 'click', (function(marker, i){
                     return function() {
                         infowindow.setContent(school[i][0]);
-                        inforwindow.open(map, marker);
+                        infowindow.open(map, marker);
                     }
                 })(marker, i))
            }
+
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition( (position) => {
+                  var pos = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude
+                  }
+                  var infoWindow = new google.maps.Marker(
+                      {
+                          position : pos,
+                          map : this.map,
+                          title : "Her er du"
+                      }
+                  )
+                  this.map.setCenter(pos);
+              })
+          }
 }
 
 
