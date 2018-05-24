@@ -20,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/googleapi/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="513">
+              <caret line="426" column="12" lean-forward="true" selection-start-line="426" selection-start-column="12" selection-end-line="426" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -52,7 +52,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="49" />
     <option name="y" value="18" />
-    <option name="width" value="776" />
+    <option name="width" value="967" />
     <option name="height" value="882" />
   </component>
   <component name="ProjectView">
@@ -116,12 +116,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2759000" />
+    <option name="totallyTimeSpent" value="4335000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="18" width="776" height="882" extended-state="4" />
+    <frame x="49" y="18" width="967" height="882" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16644649" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1329114" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -165,8 +166,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="513">
+          <caret line="426" column="12" lean-forward="true" selection-start-line="426" selection-start-column="12" selection-end-line="426" selection-end-column="12" />
         </state>
       </provider>
     </entry>
