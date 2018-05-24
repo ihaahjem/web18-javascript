@@ -407,8 +407,8 @@
            for(i = 0; i < location.length; i++){
                 marker = new google.maps.Marker({
                     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    map: map
-                    icon: icon;
+                    map: map,
+                    icon: icon
                 });
 
                 google.maps.event.addListener(marker, 'click', (function(marker, i){
@@ -416,7 +416,7 @@
                         infowindow.setContent(locations[i][0]);
                         inforwindow.open(map, marker);
                     }
-                })(marker, i);
+                })(marker, i))
            }
 
 <!--
