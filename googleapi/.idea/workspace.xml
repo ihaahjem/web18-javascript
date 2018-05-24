@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="188">
+              <caret line="426" column="47" lean-forward="false" selection-start-line="426" selection-start-column="47" selection-end-line="426" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -49,7 +49,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="446" />
+    <option name="x" value="257" />
     <option name="y" value="23" />
     <option name="width" value="994" />
     <option name="height" value="797" />
@@ -211,7 +211,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="446" y="23" width="994" height="797" extended-state="0" />
+    <frame x="257" y="23" width="994" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -260,8 +260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="188">
+          <caret line="426" column="47" lean-forward="false" selection-start-line="426" selection-start-column="47" selection-end-line="426" selection-end-column="47" />
           <folding />
         </state>
       </provider>
