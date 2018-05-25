@@ -2,10 +2,10 @@
 
 var gMarkers = [];
 var markers = [
-    ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, school],
-    ['Campus Vulkan', 59.9233391, 10.7503081, 2, school],
-    ['Campus Brenneriveien', 59.920352, 10.7506041, 3, school],
-    ['Campus Kvadraturen', 59.911015, 10.7439543, 4, school]
+    ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, 'school'],
+    ['Campus Vulkan', 59.9233391, 10.7503081, 2, 'school'],
+    ['Campus Brenneriveien', 59.920352, 10.7506041, 3, 'school'],
+    ['Campus Kvadraturen', 59.911015, 10.7439543, 4, 'school']
 ];
 var center = {
     lat: 0,
@@ -373,7 +373,9 @@ var options = {
             ]
         }
 
-    ]
+    ],
+    gestureHandling: 'none',
+    zoomControl: false
 
 };
 var map;
@@ -413,7 +415,7 @@ function initMap() {
 }
 
 function findCenter() {
-    for (let i = 0; i < school.length; i++) {
+    for (var i = 0; i < school.length; i++) {
         center.lat += school[i][1];
         center.lng += school[i][2];
     }
@@ -422,9 +424,9 @@ function findCenter() {
 }
 
 function initMarkers() {
-    for(i = 0; i < markers.length; i++){
+    for(var i = 0; i < markers.length; i++){
         marker = new google.maps.Marker({
-            position: new google.maps.LatLng(school[i][1], school[i][2]),
+            position: new google.maps.LatLng(markers[i][1], markers[i][2]),
             map: map,
             icon: icon
         });
@@ -451,14 +453,14 @@ function findUserPosition() {
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
-            }
+            };
             var infoWindow = new google.maps.Marker(
                 {
                     position: pos,
                     map: this.map,
                     title: "Her er du"
                 }
-            )
+            );
             this.map.setCenter(pos);
         })
     }
