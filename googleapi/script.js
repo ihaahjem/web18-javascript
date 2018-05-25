@@ -24,43 +24,7 @@ function findCenter () {
     center.lng = center.lng/4;
     center.lat = center.lat/4;
 };
-
-function initMarkers(){
-    for(i = 0; i < school.length; i++){
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(school[i][1], school[i][2]),
-            map: this.map,
-            icon: icon
-        });
-
-        google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
-            return function() {
-                infowindow.setContent(school[i][0]);
-                infowindow.open(map, marker);
-            }
-        })(marker, i))
-
-        google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
-            return function() {
-                infowindow.close(map, marker);
-            }
-        })(marker, i))
-    }
-}
-
-function findUsersPosition() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            }
-            var infoWindow = new google.maps.Marker(
-                {
-                    position: pos,
-                    map: this.map,
-                    title: "Her er du"
-                }
+S }
             )
             //this.map.setCenter(pos);
         })
