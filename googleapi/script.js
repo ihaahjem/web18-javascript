@@ -386,11 +386,17 @@ var icon = {
 };
 var marker, i;
 
-filterMarkers = function(category){
+
+function filterMarkers(category){
+    var categories = $(".chk-btn").toArray().filter(function(elm) {
+        return elm.checked
+    }).map(function (value) {
+        return value.id
+    })
         for(i = 0; i < markers.length; i++){
             var marker = gMarkers[i];
             category = markers[i][4];
-            if(marker.category === category || category.length === 0){
+            if(categories.includes(category) || categories.length === 0){
                 marker.setVisible(true);
             }
             else{
@@ -406,6 +412,8 @@ window.onload = function () {
     initMap();
 };
 
+$(".chk-btn").on('change', filterMarkers)
+
 function initMap() {
     findCenter();
     initMarkers();
@@ -413,9 +421,9 @@ function initMap() {
 }
 
 function findCenter() {
-    for (var i = 0; i < school.length; i++) {
-        center.lat += school[i][1];
-        center.lng += school[i][2];
+    for (var i = 0; i < markers.length; i++) {
+        center.lat += markers[i][1];
+        center.lng += markers[i][2];
     }
     center.lng = center.lng / 4;
     center.lat = center.lat / 4;
@@ -441,6 +449,7 @@ function initMarkers() {
                 infowindow.close(map, marker);
             }
         })(marker, i))
+        gMarkers[i] = marker
     }
 }
 
