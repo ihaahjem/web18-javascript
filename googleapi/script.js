@@ -751,7 +751,11 @@ var options = {
     ]
 
 }
-
+var filters = {school: false, food: false, transport: false}
+var center = {
+    lat: 0,
+    lng: 0
+};
 
 window.onload = function () {
     map = new google.maps.Map(document.getElementById('map'), options);
@@ -761,21 +765,6 @@ window.onload = function () {
 
 function initMap() {
     findCenter();
-
-    var filters = {school: false, food: false, transport: false}
-
-    var school = [
-        ['Campus Fjerdingen', 59.9161644, 10.7574865, 1],
-        ['Campus Vulkan', 59.9233391, 10.7503081, 2],
-        ['Campus Brenneriveien', 59.920352, 10.7506041, 3],
-        ['Campus Kvadraturen', 59.911015, 10.7439543, 4]
-    ];
-
-    var center = {
-        lat: 0,
-        lng: 0
-    };
-
     initMarkers();
     findUserPosition()
 }
