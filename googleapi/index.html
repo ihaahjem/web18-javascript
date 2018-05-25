@@ -11,26 +11,52 @@
             width:800px;
         }
 
-        #filterBox{
-            z-index:10;
-            height:20px;
-            width:40px;
-            background-color:red;
-            position:absolute;
-            top:300px;
-            left:30px;
+        #filterBox {
+            z-index: 10;
+            height: 20px;
+            width: 40px;
+            background-color: red;
+            position: absolute;
+            top: 300px;
+            left: 30px;
+        }
+        input.chk-btn{
+            display:none;
+        }
+
+        input.chk-btn + label{
+            background: red;
+            cursor: pointer;
+        }
+
+        input.chk-btn:not(.checked)+label:hover{
+            box-shadow: 0px 1px 3px;
+        }
+
+        input.chk-btn+label:active, input.chk-btn:checked+label{
+            box-shadow: 0px 0px 3px inset;
+            background: yellow;
         }
     </style>
 </head>
 <body>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Uv3zMYXiAqoCa8KBpqvBC75n9ARyxdI"></script>
 <script src="script.js"></script>
+
 <h1>Kake</h1>
 
+<div id="schoolDiv"></div>
+<div id="buttons">
 
-<div id="school"></div>
-<div id="filterBox">
-<button type="button" onclick="clickFunction()"></button>
+    <input type="checkbox" name="filter" id="school" class="chk-btn" onclick="filterMarkers(school)">
+    <label for="school">School</label>
+
+    <input type="checkbox" name="filter" id="food" class="chk-btn" onclick="filterMarkers(food)">
+    <label for="food">Food</label>
+
+    <input type="checkbox" name="filter" id="transport" class="chk-btn" onclick="filterMarkers(transport)">
+    <label for="transport">Transport</label>
 </div>
 
 <div id="map"></div>
