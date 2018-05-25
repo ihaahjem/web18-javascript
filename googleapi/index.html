@@ -22,6 +22,10 @@
             left:30px;
         }
 
+        #schoolDiv{
+            z-index:5;
+        }
+
 
     </style>
 </head>
@@ -30,7 +34,7 @@
 <h1>Kake</h1>
 
 
-<div id="school"></div>
+<div id="schoolDiv"></div>
 <div id="filterBox">
 <button type="button" onclick="clickFunction()"></button>
 </div>
@@ -39,6 +43,8 @@
 <script>
 
       function initMap(){
+
+          var filters = {school:false, food:false, transport:false}
 
           var school = [
               ['Campus Fjerdingen', 59.9161644, 10.7574865, 1],
@@ -464,8 +470,7 @@
                })(marker, i))
            }
 
-<<<<<<< HEAD
-=======
+
           if (navigator.geolocation) {
               navigator.geolocation.getCurrentPosition( (position) => {
                   var pos = {
@@ -482,7 +487,7 @@
                   this.map.setCenter(pos);
               })
           }
->>>>>>> d6ad10be25fc90a1346ce6bd2f9ee8b2598f9654
+
 }
 
 
@@ -490,7 +495,7 @@
 
     <script>
         function clickFunction(){
-            document.getElementById('school').style.display = "block";
+            document.getElementById('schoolDiv').style.display='block';
         }
 
     </script>
