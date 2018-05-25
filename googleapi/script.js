@@ -373,7 +373,9 @@ var options = {
             ]
         }
 
-    ]
+    ],
+    gestureHandling: 'none',
+    zoomControl: false
 
 };
 var map;
