@@ -6,15 +6,10 @@
 
 input.chk-btn{
     z-index:100;
-    position:absolute;
     top:10px;
-    display:none;
 }
 
 input.chk-btn + label{
-    position: absolute;
-    top:400px;
-    left: 100px;
     background: red;
     cursor: pointer;
 }
