@@ -12,10 +12,16 @@
         }
 
         input.chk-btn{
+            z-index:100;
+            position:absolute;
+            top:10px;
             display:none;
         }
 
         input.chk-btn + label{
+            position: absolute;
+            top:400px;
+            left: 100px;
             background: red;
             cursor: pointer;
         }
@@ -26,7 +32,7 @@
 
         input.chk-btn+label:active, input.chk-btn:checked+label{
             box-shadow: 0px 0px 3px inset;
-            background: yellow;
+            background: #faffb7;
         }
 
 
@@ -52,35 +58,7 @@
 
 <div id="map"></div>
 <script>
-          var gMarkers = [];
-          var markers = [];
-          var category = markers[i][4];
-
-      function initMap(){
-
-
-          markers = [
-              ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, school],
-              ['Campus Vulkan', 59.9233391, 10.7503081, 2, school],
-              ['Campus Brenneriveien', 59.920352, 10.7506041, 3, school],
-              ['Campus Kvadraturen', 59.911015, 10.7439543, 4, school]
-          ];
-
-
-          filterMarkers = function(category){
-            for(i = 0; i < markers.length; i++){
-                var marker = gMarkers[i];
-
-                if(marker.category == category || category.length == 0){
-                    marker.setVisible(true);
-                }
-                else{
-                    marker.setVisible(false);
-                }
-
-            }
-
-          };
+          
 
           var center = {
               lat : 0,
@@ -514,7 +492,7 @@
                       }
                   )
                   this.map.setCenter(pos);
-              })
+              });
           }
 
 }
