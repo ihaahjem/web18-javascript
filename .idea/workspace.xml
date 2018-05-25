@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/googleapi/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="285">
+              <caret line="54" column="104" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="104" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
@@ -29,19 +29,20 @@
                 <element signature="e#487#636#0" />
                 <element signature="e#685#733#0" />
                 <element signature="e#798#885#0" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleapi/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="378" lean-forward="true" selection-start-line="378" selection-end-line="378" />
+            <state relative-caret-position="255">
+              <caret line="407" lean-forward="true" selection-start-line="407" selection-end-line="407" />
               <folding>
+                <element signature="e#35#283#0" />
                 <element signature="e#298#324#0" />
+                <element signature="e#348#9393#0" />
                 <element signature="e#367#423#0" />
                 <element signature="e#436#9330#0" />
                 <element signature="e#446#663#0" />
@@ -168,12 +169,19 @@
                 <element signature="e#9848#9904#0" />
                 <element signature="e#9921#9978#0" />
                 <element signature="n#!!block;n#initMap#0" />
+                <element signature="n#!!block;n#findCenter#0" />
                 <element signature="e#10323#10402#0" />
+                <element signature="n#!!block;n#initMarkers#0" />
+                <element signature="e#10536#11164#0" />
                 <element signature="e#10578#10708#0" />
                 <element signature="e#10791#10948#0" />
                 <element signature="e#10823#10938#0" />
                 <element signature="e#19443#19575#0" />
                 <element signature="e#19482#19558#0" />
+                <element signature="n#!!block;n#findUserPosition#0" />
+                <element signature="e#19726#20284#0" />
+                <element signature="e#19798#20271#0" />
+                <element signature="e#19828#19955#0" />
                 <element signature="e#20037#20192#0" />
               </folding>
             </state>
@@ -212,9 +220,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="590" />
+    <option name="x" value="261" />
     <option name="y" value="18" />
-    <option name="width" value="1010" />
+    <option name="width" value="1339" />
     <option name="height" value="882" />
   </component>
   <component name="ProjectView">
@@ -275,18 +283,18 @@
       <option name="presentableId" value="Default" />
       <updated>1527163115054</updated>
       <workItem from="1527163116260" duration="897000" />
-      <workItem from="1527238036045" duration="8693000" />
+      <workItem from="1527238036045" duration="10101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16256000" />
+    <option name="totallyTimeSpent" value="17664000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="590" y="18" width="1010" height="882" extended-state="4" />
+    <frame x="261" y="18" width="1339" height="882" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19374369" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14545454" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -329,7 +337,6 @@
             <element signature="e#487#636#0" />
             <element signature="e#685#733#0" />
             <element signature="e#798#885#0" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -346,7 +353,6 @@
             <element signature="e#487#636#0" />
             <element signature="e#685#733#0" />
             <element signature="e#798#885#0" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -358,29 +364,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googleapi/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="e#256#318#0" />
-            <element signature="e#341#456#0" />
-            <element signature="e#487#636#0" />
-            <element signature="e#685#733#0" />
-            <element signature="e#798#885#0" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="378" lean-forward="true" selection-start-line="378" selection-end-line="378" />
+        <state relative-caret-position="255">
+          <caret line="407" lean-forward="true" selection-start-line="407" selection-end-line="407" />
           <folding>
+            <element signature="e#35#283#0" />
             <element signature="e#298#324#0" />
+            <element signature="e#348#9393#0" />
             <element signature="e#367#423#0" />
             <element signature="e#436#9330#0" />
             <element signature="e#446#663#0" />
@@ -507,13 +498,36 @@
             <element signature="e#9848#9904#0" />
             <element signature="e#9921#9978#0" />
             <element signature="n#!!block;n#initMap#0" />
+            <element signature="n#!!block;n#findCenter#0" />
             <element signature="e#10323#10402#0" />
+            <element signature="n#!!block;n#initMarkers#0" />
+            <element signature="e#10536#11164#0" />
             <element signature="e#10578#10708#0" />
             <element signature="e#10791#10948#0" />
             <element signature="e#10823#10938#0" />
             <element signature="e#19443#19575#0" />
             <element signature="e#19482#19558#0" />
+            <element signature="n#!!block;n#findUserPosition#0" />
+            <element signature="e#19726#20284#0" />
+            <element signature="e#19798#20271#0" />
+            <element signature="e#19828#19955#0" />
             <element signature="e#20037#20192#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleapi/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="54" column="104" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="104" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#256#318#0" />
+            <element signature="e#341#456#0" />
+            <element signature="e#487#636#0" />
+            <element signature="e#685#733#0" />
+            <element signature="e#798#885#0" />
           </folding>
         </state>
       </provider>

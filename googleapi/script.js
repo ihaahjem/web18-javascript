@@ -401,11 +401,9 @@ filterMarkers = function(category){
 
     };
 
-
 window.onload = function () {
     map = new google.maps.Map(document.getElementById('map'), options);
     initMap();
-
 };
 
 function initMap() {
