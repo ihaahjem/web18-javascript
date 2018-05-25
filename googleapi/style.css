@@ -1,23 +1,29 @@
-    <style>
-        #map{
-            height:800px;
-            width:800px;
-        }
 
+#map{
+    height:800px;
+    width:800px;
+}
 
-        #filterBox{
-            z-index:10;
-            height:20px;
-            width:40px;
-            background-color:red;
-            position:absolute;
-            top:300px;
-            left:30px;
-        }
+input.chk-btn{
+    z-index:100;
+    position:absolute;
+    top:10px;
+    display:none;
+}
 
-        #schoolDiv{
-            z-index:5;
-        }
+input.chk-btn + label{
+    position: absolute;
+    top:400px;
+    left: 100px;
+    background: red;
+    cursor: pointer;
+}
 
+input.chk-btn:not(.checked)+label:hover{
+    box-shadow: 0px 1px 3px;
+}
 
-    </style>
+input.chk-btn+label:active, input.chk-btn:checked+label{
+    box-shadow: 0px 0px 3px inset;
+    background: #faffb7;
+}
