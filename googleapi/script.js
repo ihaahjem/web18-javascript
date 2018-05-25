@@ -1,86 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Google Map</title>
-    <style>
-        #map{
-            height:800px;
-            width:800px;
-        }
-
-        input.chk-btn{
-            display:none;
-        }
-
-        input.chk-btn + label{
-            background: red;
-            cursor: pointer;
-        }
-
-        input.chk-btn:not(.checked)+label:hover{
-            box-shadow: 0px 1px 3px;
-        }
-
-        input.chk-btn+label:active, input.chk-btn:checked+label{
-            box-shadow: 0px 0px 3px inset;
-            background: yellow;
-        }
-
-
-    </style>
-</head>
-<body>
-
-<h1>Kake</h1>
-
-
-<div id="schoolDiv"></div>
-<div id="buttons">
-
-    <input type="checkbox" name="filter" id="school" class="chk-btn" onclick="filterMarkers(school)">
-    <label for="school">School</label>
-
-    <input type="checkbox" name="filter" id="food" class="chk-btn" onclick="filterMarkers(food)">
-    <label for="food">Food</label>
-
-    <input type="checkbox" name="filter" id="transport" class="chk-btn" onclick="filterMarkers(transport)">
-    <label for="transport">Transport</label>
-</div>
-
-<div id="map"></div>
 <script>
-          var gMarkers = [];
-          var markers = [];
-          var category = markers[i][4];
 
       function initMap(){
 
+          var filters = {school:false, food:false, transport:false}
 
-          markers = [
-              ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, school],
-              ['Campus Vulkan', 59.9233391, 10.7503081, 2, school],
-              ['Campus Brenneriveien', 59.920352, 10.7506041, 3, school],
-              ['Campus Kvadraturen', 59.911015, 10.7439543, 4, school]
+          var school = [
+              ['Campus Fjerdingen', 59.9161644, 10.7574865, 1],
+              ['Campus Vulkan', 59.9233391, 10.7503081, 2],
+              ['Campus Brenneriveien', 59.920352, 10.7506041, 3],
+              ['Campus Kvadraturen', 59.911015, 10.7439543, 4]
           ];
-
-
-          filterMarkers = function(category){
-            for(i = 0; i < markers.length; i++){
-                var marker = gMarkers[i];
-
-                if(marker.category == category || category.length == 0){
-                    marker.setVisible(true);
-                }
-                else{
-                    marker.setVisible(false);
-                }
-
-            }
-
-          };
 
           var center = {
               lat : 0,
@@ -478,16 +407,16 @@
 
            var marker, i;
 
-           for(i = 0; i < markers.length; i++){
+           for(i = 0; i < school.length; i++){
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+                    position: new google.maps.LatLng(school[i][1], school[i][2]),
                     map: map,
                     icon: icon
                 });
 
                 google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
                     return function() {
-                        infowindow.setContent(markers[i][0]);
+                        infowindow.setContent(school[i][0]);
                         infowindow.open(map, marker);
                     }
                 })(marker, i))
@@ -506,7 +435,7 @@
                       lat: position.coords.latitude,
                       lng: position.coords.longitude
                   }
-                  var locationWindow = new google.maps.Marker(
+                  var infoWindow = new google.maps.Marker(
                       {
                           position : pos,
                           map : this.map,
@@ -528,8 +457,3 @@
         }
 
     </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Uv3zMYXiAqoCa8KBpqvBC75n9ARyxdI&callback=initMap"
-        async defer></script>
-</body>
-</html>
