@@ -407,11 +407,9 @@ function filterMarkers(category){
 
     };
 
-
 window.onload = function () {
     map = new google.maps.Map(document.getElementById('map'), options);
     initMap();
-
 };
 
 $(".chk-btn").on('change', filterMarkers)
