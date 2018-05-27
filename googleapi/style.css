@@ -13,7 +13,7 @@ input.chk-btn{
 
 input.chk-btn + label{
     margin: auto;
-    position: fixed;
+    position: relative;
     z-index:100;
     background: red;
     cursor: pointer;
@@ -25,20 +25,24 @@ input.chk-btn + label{
 }
 
 input#school + label[for=school]{
-    top: 250px;
+    top:250px;
+    left:0;
 
 }
 
 input#food + label[for=food]{
-    top: 300px;
+    top:300px;
+    left:0;
 }
 
 input#transport + label[for=transport]{
     top: 350px;
+    left:0;
 }
 
 input.chk-btn:not(.checked)+label:hover{
     box-shadow: 0 1px 3px;
+    left:0;
 }
 
 input.chk-btn+label:active, input.chk-btn:checked+label{
