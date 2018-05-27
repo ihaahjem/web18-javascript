@@ -2,10 +2,29 @@
 
 var gMarkers = [];
 var markers = [
-    ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, 'school'],
-    ['Campus Vulkan', 59.9233391, 10.7503081, 2, 'school'],
-    ['Campus Brenneriveien', 59.920352, 10.7506041, 3, 'school'],
-    ['Campus Kvadraturen', 59.911015, 10.7439543, 4, 'school']
+    ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, 'school', 'sirkelmarker.png'],
+    ['Campus Vulkan', 59.9233391, 10.7503081, 2, 'school', 'sirkelmarker.png'],
+    ['Campus Brenneriveien', 59.920352, 10.7506041, 3, 'school', 'sirkelmarker.png'],
+    ['Campus Kvadraturen', 59.911015, 10.7439543, 4, 'school', 'sirkelmarker.png'],
+    ['Talor og Jørgen', 59.9149799, 10.7504415, 5, 'food', 'food-marker.png'],
+    ['Mathallen', 59.922217, 10.749852, 6, 'food', 'food-marker.png'],
+    ['Taco República', 59.9170294, 10.7509215, 7, 'food', 'food-marker.png'],
+    ['Freddy Fuego', 59.9178054, 10.7515039, 8, 'food', 'food-marker.png'],
+    ['Peloton', 59.9174132, 10.7522924, 9, 'food', 'food-marker.png'],
+    ['Munchies', 59.91638, 10.7490935, 10, 'food', 'food-marker.png'],
+    ['Haralds Vaffler', 59.913759, 10.745212, 11, 'food', 'food-marker.png'],
+    ['Würst', 59.9137012, 10.7465163, 12, 'food', 'food-marker.png'],
+    ['Cafe Sara', 59.9176068, 10.754149, 13, 'bar', 'bar-marker.png'],
+    ['Verkstedet', 59.9177192, 10.7517947, 14, 'bar', 'bar-marker.png'],
+    ['Cafe Sør', 59.9141846, 10.7461596, 15, 'bar', 'bar-marker.png'],
+    ['Crow bar', 59.9171999, 10.7512208, 16, 'bar', 'bar-marker.png'],
+    ['Tilt', 59.9162015, 10.7485173, 17, 'bar', 'bar-marker.png'],
+    ['Angst', 59.9139828, 10.7465088, 18, 'bar', 'bar-marker.png'],
+    ['Peretroska', 59.9135765, 10.7470165, 19, 'bar', 'bar-marker.png'],
+    ['Kniven', 59.9163927, 10.7490339, 20, 'bar', 'bar-marker.png'],
+    ['Oslo Bar & Bowling', 59.9158823, 10.7485441, 21, 'bar', 'bar-marker.png'],
+    ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png']
+
 ];
 var center = {
     lat: 0,
@@ -380,11 +399,9 @@ var options = {
 };
 var map;
 var infowindow = new google.maps.InfoWindow();
-var icon = {
-    scaledSize: new google.maps.Size(30,30),
-    url: 'sirkelmarker.png'
-};
 var marker, i;
+var icon;
+
 
 
 function filterMarkers(category){
@@ -434,7 +451,10 @@ function initMarkers() {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(markers[i][1], markers[i][2]),
             map: map,
-            icon: icon
+            icon: icon = {
+                scaledSize: new google.maps.Size(30, 30),
+                url: markers[i][5]
+            }
         });
 
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
