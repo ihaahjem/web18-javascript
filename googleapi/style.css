@@ -1,7 +1,11 @@
 
 #map{
-    height:800px;
-    width:800px;
+    position: absolute;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    left:0;
+    top:0;
 
 }
 
@@ -13,7 +17,7 @@ input.chk-btn{
 
 input.chk-btn + label{
     margin: auto;
-    position: relative;
+    position: fixed;
     z-index:100;
     background: red;
     cursor: pointer;
@@ -21,6 +25,7 @@ input.chk-btn + label{
     height:10px;
     padding:10px;
     border:1px solid black;
+    vertical-align: top;
 
 }
 
@@ -47,6 +52,13 @@ input.chk-btn:not(.checked)+label:hover{
 
 input.chk-btn+label:active, input.chk-btn:checked+label{
     box-shadow: 0 0 3px inset;
-    background: #faffb7;
+    background: #870401;
+}
+
+#button{
+    position: relative;
+    background: darkgrey;
+    height:400px;
+    width:400px;
 }
 
