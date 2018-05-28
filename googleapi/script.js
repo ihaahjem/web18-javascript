@@ -407,7 +407,7 @@ var options = {
         }
 
     ],
-    gestureHandling: 'none',
+    gestureHandling: 'greedy',
     zoomControl: true
 
 };
@@ -418,7 +418,7 @@ var icon;
 
 
 
-function filterMarkers(category){
+function filterMarkers(category)    {
     var categories = $(".chk-btn").toArray().filter(function(elm) {
         return elm.checked
     }).map(function (value) {
