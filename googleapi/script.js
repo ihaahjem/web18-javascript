@@ -424,7 +424,7 @@ var infowindow = new google.maps.InfoWindow();
 var marker, i;
 var icon;
 var userPosition;
-var infoWindowContent;
+
 
 
 
@@ -495,7 +495,7 @@ function initMarkers() {
 
         marker.setVisible(false);
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
-        infoWindowContent = document.getElementById('moreInfo'), markers[i][0];
+        var infoWindowContent = markers[i][0];
             return function() {
                 infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
