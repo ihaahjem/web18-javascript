@@ -448,15 +448,6 @@ function filterMarkers(category)    {
 
 window.onload = function () {
     map = new google.maps.Map(document.getElementById('map'), options);
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    var directionsService = new google.maps.DirectionsService;
-
-    directionsDisplay.setMap(map);
-
-    calculateAndDisplayRoute(directionsService, directionsDisplay);
-    document.getElementById('mode').addEventListener('change', function() {
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-    });
     initMap();
 };
 
@@ -466,7 +457,7 @@ function initMap() {
     findUserPosition()
     findCenter();
     initMarkers();
-
+    initDirections()
 }
 
 function findCenter() {
@@ -487,7 +478,6 @@ function initMarkers() {
                 scaledSize: new google.maps.Size(30, 30),
                 url: markers[i][5]
             },
-
         });
 
         marker.setVisible(false);
@@ -524,14 +514,31 @@ function findUserPosition() {
             );
             this.map.setCenter(pos);
             userPosition = pos;
+            console.log(userPosition)
         })
     }
 }
 
+function initDirections() {
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
+
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('right-panel'));
+
+    document.getElementById('mode').addEventListener('change', function() {
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+    });
+}
+
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     var selectedMode = document.getElementById('mode').value;
+    console.log(userPosition)
     directionsService.route({
-        origin: {lat: 59.916224, lng: 10.759697},
+        origin : {
+            lat : userPosition.lat,
+            lng : userPosition.lng
+        },
         destination: {lat: 59.9233391, lng: 10.7503081},
         travelMode: google.maps.TravelMode[selectedMode]
     }, function(response, status) {
