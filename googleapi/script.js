@@ -2,10 +2,16 @@
 
 var gMarkers = [];
 var markers = [
+//
+//Skole markører
+//
     ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, 'school', 'sirkelmarker.png'],
     ['Campus Vulkan', 59.9233391, 10.7503081, 2, 'school', 'sirkelmarker.png'],
     ['Campus Brenneriveien', 59.920352, 10.7506041, 3, 'school', 'sirkelmarker.png'],
     ['Campus Kvadraturen', 59.911015, 10.7439543, 4, 'school', 'sirkelmarker.png'],
+//
+//Spisested markører
+//
     ['Talor og Jørgen', 59.9149799, 10.7504415, 5, 'food', 'food-marker.png'],
     ['Mathallen', 59.922217, 10.749852, 6, 'food', 'food-marker.png'],
     ['Taco República', 59.9170294, 10.7509215, 7, 'food', 'food-marker.png'],
@@ -14,6 +20,9 @@ var markers = [
     ['Munchies', 59.91638, 10.7490935, 10, 'food', 'food-marker.png'],
     ['Haralds Vaffler', 59.913759, 10.745212, 11, 'food', 'food-marker.png'],
     ['Würst', 59.9137012, 10.7465163, 12, 'food', 'food-marker.png'],
+//
+//Bar/utested markører
+//
     ['Cafe Sara', 59.9176068, 10.754149, 13, 'bar', 'bar-marker.png'],
     ['Verkstedet', 59.9177192, 10.7517947, 14, 'bar', 'bar-marker.png'],
     ['Cafe Sør', 59.9141846, 10.7461596, 15, 'bar', 'bar-marker.png'],
