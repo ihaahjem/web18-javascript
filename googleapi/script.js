@@ -423,18 +423,12 @@ var map;
 var infowindow = new google.maps.InfoWindow();
 var marker, i;
 var icon;
-var userPosition;
-var categories;
-
-
-
-
+var userPosition = {};
 
 function filterMarkers(category)    {
     var categories = $(".chk-btn").toArray().filter(function(elm){
         return elm.checked
     }).map(function (value) {
-        console.log(value.id);
         return value.id
     });
         for(i = 0; i < markers.length; i++){
@@ -454,15 +448,25 @@ function filterMarkers(category)    {
 
 window.onload = function () {
     map = new google.maps.Map(document.getElementById('map'), options);
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
+
+    directionsDisplay.setMap(map);
+
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+    document.getElementById('mode').addEventListener('change', function() {
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+    });
     initMap();
 };
 
 $(".chk-btn").on('change', filterMarkers)
 
 function initMap() {
+    findUserPosition()
     findCenter();
     initMarkers();
-    findUserPosition()
+
 }
 
 function findCenter() {
@@ -524,8 +528,18 @@ function findUserPosition() {
     }
 }
 
-
-function findRoute() {
-    console.log(userPosition);
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    var selectedMode = document.getElementById('mode').value;
+    directionsService.route({
+        origin: {lat: 59.916224, lng: 10.759697},
+        destination: {lat: 59.9233391, lng: 10.7503081},
+        travelMode: google.maps.TravelMode[selectedMode]
+    }, function(response, status) {
+        if (status == 'OK') {
+            directionsDisplay.setDirections(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
 }
 
