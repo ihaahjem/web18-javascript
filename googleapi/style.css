@@ -50,6 +50,11 @@ input#bar + label[for=bar]{
     left:0;
 }
 
+input#gym + label[for=gym]{
+    top: 450px;
+    left:0;
+}
+
 input.chk-btn:not(.checked)+label:hover{
     box-shadow: 0 1px 3px;
     left:0;
