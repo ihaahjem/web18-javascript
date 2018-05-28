@@ -424,7 +424,7 @@ var infowindow = new google.maps.InfoWindow();
 var marker, i;
 var icon;
 var userPosition;
-var categories;
+
 
 
 
@@ -528,4 +528,27 @@ function findUserPosition() {
 function findRoute() {
     console.log(userPosition);
 }
+
+function infoLink(markerNumber){
+    var categories = $(".info-btn").toArray().filter(function(elm){
+        return elm.checked
+    }).map(function (value) {
+        console.log(value.id);
+        return value.id
+    });
+    for(i = 0; i < markers.length; i++){
+        var marker = gMarkers[i];
+        markerNumber = markers[i][3];
+
+        if(categories.includes(markerNumber)){
+
+            marker.setVisible(true);
+        }
+        else{
+            marker.setVisible(false);
+        }
+
+    }
+}
+
 
