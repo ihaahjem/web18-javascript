@@ -2,7 +2,7 @@
 
 var gMarkers = [];
 var markers = [
-    ['Campus Fjerdingen', 59.9161644, 10.7574865, 1, 'school', 'sirkelmarker.png'],
+    ['Campus Fjerdingen', 59.916224, 10.759697, 1, 'school', 'sirkelmarker.png'],
     ['Campus Vulkan', 59.9233391, 10.7503081, 2, 'school', 'sirkelmarker.png'],
     ['Campus Brenneriveien', 59.920352, 10.7506041, 3, 'school', 'sirkelmarker.png'],
     ['Campus Kvadraturen', 59.911015, 10.7439543, 4, 'school', 'sirkelmarker.png'],
@@ -394,7 +394,7 @@ var options = {
 
     ],
     gestureHandling: 'none',
-    zoomControl: false
+    zoomControl: true
 
 };
 var map;
