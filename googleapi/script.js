@@ -33,7 +33,11 @@ var markers = [
     ['Peretroska', 59.9135765, 10.7470165, 19, 'bar', 'bar-marker.png'],
     ['Kniven', 59.9163927, 10.7490339, 20, 'bar', 'bar-marker.png'],
     ['Oslo Bar & Bowling', 59.9158823, 10.7485441, 21, 'bar', 'bar-marker.png'],
-    ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png']
+    ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png'],
+//
+//Treningssentre
+//
+    ['Athletica', 59.9146546, 10.7486177, 23, 'gym', 'gym-marker.png']
 
 ];
 var center = {
@@ -467,14 +471,14 @@ function initMarkers() {
             }
         });
 
-        google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
+        google.maps.event.addListener(marker, 'click', (function(marker, i){
             return function() {
                 infowindow.setContent(markers[i][0]);
                 infowindow.open(map, marker);
             }
         })(marker, i))
 
-        google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
+        google.maps.event.addListener(map, 'click', (function(marker, i){
             return function() {
                 infowindow.close(map, marker);
             }
