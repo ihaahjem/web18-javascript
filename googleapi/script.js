@@ -411,19 +411,22 @@ var map;
 var infowindow = new google.maps.InfoWindow();
 var marker, i;
 var icon;
+var userPosition;
+var categories;
 
 
 
 function filterMarkers(category)    {
-    var categories = $(".chk-btn").toArray().filter(function(elm) {
+    categories = $(".chk-btn").toArray().filter(function(elm) {
         return elm.checked
     }).map(function (value) {
+        console.log(value.id);
         return value.id
-    })
+    });
         for(i = 0; i < markers.length; i++){
             var marker = gMarkers[i];
             category = markers[i][4];
-            if(categories.includes(category) || categories.length === 0){
+            if(categories.includes(category)){
                 marker.setVisible(true);
             }
             else{
@@ -431,7 +434,6 @@ function filterMarkers(category)    {
             }
 
         }
-
     };
 
 window.onload = function () {
@@ -466,7 +468,7 @@ function initMarkers() {
                 url: markers[i][5]
             }
         });
-
+        marker.setVisible(false);
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
             return function() {
                 infowindow.setContent(markers[i][0]);
@@ -484,7 +486,6 @@ function initMarkers() {
 }
 
 function findUserPosition() {
-
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
             var pos = {
@@ -499,7 +500,13 @@ function findUserPosition() {
                 }
             );
             this.map.setCenter(pos);
+            userPosition = pos;
         })
     }
+}
+
+
+function findRoute() {
+    console.log(userPosition);
 }
 
