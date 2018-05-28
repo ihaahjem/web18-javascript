@@ -33,7 +33,19 @@ var markers = [
     ['Peretroska', 59.9135765, 10.7470165, 19, 'bar', 'bar-marker.png'],
     ['Kniven', 59.9163927, 10.7490339, 20, 'bar', 'bar-marker.png'],
     ['Oslo Bar & Bowling', 59.9158823, 10.7485441, 21, 'bar', 'bar-marker.png'],
-    ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png']
+    ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png'],
+//
+//Treningssentre
+//
+    ['Actic Storgata', 59.91618200000001, 10.757546, 23, 'gym', 'gym-marker.png'],
+    ['Haralds Gym', 59.9157868, 10.7587026, 24, 'gym', 'gym-marker.png'],
+    ['SATS Schous plass', 59.9188379, 10.7603446, 25, 'gym', 'gym-marker.png'],
+    ['EVO Grünerløkka', 59.9199906, 10.7598709, 26, 'gym', 'gym-marker.png'],
+    ['SATS Spektrum', 59.9128297, 10.7549285, 27, 'gym', 'gym-marker.png'],
+    ['Gymmen', 59.9170116, 10.7587169, 28, 'gym', 'gym-marker.png'],
+    ['Lofoten Performance', 59.91722379999998, 10.7561713, 29, 'gym', 'gym-marker.png'],
+    ['SiO Athletica Vukan', 59.9231517, 10.7500041, 28, 'gym', 'gym-marker.png'],
+    ['SiO Athletica Centrum', 59.9186627, 10.731186, 29, 'gym', 'gym-marker.png']
 
 ];
 var center = {
@@ -416,8 +428,10 @@ var categories;
 
 
 
+
+
 function filterMarkers(category)    {
-    categories = $(".chk-btn").toArray().filter(function(elm) {
+    var categories = $(".chk-btn").toArray().filter(function(elm){
         return elm.checked
     }).map(function (value) {
         console.log(value.id);
@@ -426,7 +440,9 @@ function filterMarkers(category)    {
         for(i = 0; i < markers.length; i++){
             var marker = gMarkers[i];
             category = markers[i][4];
-            if(categories.includes(category)){
+
+           if(categories.includes(category)){
+
                 marker.setVisible(true);
             }
             else{
@@ -466,17 +482,20 @@ function initMarkers() {
             icon: icon = {
                 scaledSize: new google.maps.Size(30, 30),
                 url: markers[i][5]
-            }
+            },
+
         });
+
         marker.setVisible(false);
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
+
             return function() {
                 infowindow.setContent(markers[i][0]);
                 infowindow.open(map, marker);
             }
         })(marker, i))
 
-        google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
+        google.maps.event.addListener(map, 'click', (function(marker, i){
             return function() {
                 infowindow.close(map, marker);
             }
