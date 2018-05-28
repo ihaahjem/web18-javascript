@@ -14,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -153,13 +153,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="500" column="45" lean-forward="true" selection-start-line="500" selection-start-column="45" selection-end-line="500" selection-end-column="45" />
+            <state relative-caret-position="355">
+              <caret line="508" column="22" lean-forward="true" selection-start-line="508" selection-start-column="22" selection-end-line="508" selection-end-column="22" />
               <folding>
                 <element signature="e#1914#10961#0" />
+                <element signature="n#!!block;n#initMap#0" />
+                <element signature="n#!!block;n#findCenter#0" />
               </folding>
             </state>
           </provider>
@@ -200,8 +202,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2761">
-              <caret line="342" column="22" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
+            <state relative-caret-position="2701">
+              <caret line="338" column="22" selection-start-line="338" selection-start-column="22" selection-end-line="338" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -376,12 +378,12 @@
       <workItem from="1527249629838" duration="2324000" />
       <workItem from="1527252137532" duration="4718000" />
       <workItem from="1527339078424" duration="3751000" />
-      <workItem from="1527422335959" duration="27972000" />
+      <workItem from="1527422335959" duration="28511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38765000" />
+    <option name="totallyTimeSpent" value="39304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="422" y="148" width="811" height="645" extended-state="0" />
@@ -569,6 +571,8 @@
           <caret line="455" column="28" selection-start-line="455" selection-start-column="28" selection-end-line="455" selection-end-column="28" />
           <folding>
             <element signature="e#1914#10961#0" />
+            <element signature="n#!!block;n#initMap#0" />
+            <element signature="n#!!block;n#findCenter#0" />
           </folding>
         </state>
       </provider>
@@ -635,6 +639,8 @@
           <caret line="4" column="57" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="57" />
           <folding>
             <element signature="e#1914#10961#0" />
+            <element signature="n#!!block;n#initMap#0" />
+            <element signature="n#!!block;n#findCenter#0" />
           </folding>
         </state>
       </provider>
@@ -659,6 +665,8 @@
           <caret line="398" column="18" lean-forward="true" selection-start-line="398" selection-start-column="18" selection-end-line="398" selection-end-column="18" />
           <folding>
             <element signature="e#1914#10961#0" />
+            <element signature="n#!!block;n#initMap#0" />
+            <element signature="n#!!block;n#findCenter#0" />
           </folding>
         </state>
       </provider>
@@ -817,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2761">
-          <caret line="342" column="22" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
+        <state relative-caret-position="2701">
+          <caret line="338" column="22" selection-start-line="338" selection-start-column="22" selection-end-line="338" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -850,20 +858,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="500" column="45" lean-forward="true" selection-start-line="500" selection-start-column="45" selection-end-line="500" selection-end-column="45" />
-          <folding>
-            <element signature="e#1914#10961#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="508" column="22" lean-forward="true" selection-start-line="508" selection-start-column="22" selection-end-line="508" selection-end-column="22" />
+          <folding>
+            <element signature="e#1914#10961#0" />
+            <element signature="n#!!block;n#initMap#0" />
+            <element signature="n#!!block;n#findCenter#0" />
+          </folding>
         </state>
       </provider>
     </entry>
