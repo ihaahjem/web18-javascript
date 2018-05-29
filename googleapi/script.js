@@ -1,5 +1,4 @@
 
-
 var gMarkers = [];
 var markers = [
 
@@ -425,18 +424,109 @@ var options = {
 
     ],
     gestureHandling: 'greedy',
-    zoomControl: true
-
+    zoomControl: true,
+    mapTypeControl : false
 };
+
 var map;
 var infowindow = new google.maps.InfoWindow();
 var icon;
 var userPosition;
 
+
 //bysykkel
 var stations = [];
 var availability = [];
 var availabilityInterval;
+const config = {
+    size: 78,
+    strokeWidth: 3,
+    font: {
+        family: 'Roboto Slab',
+        weight: 700,
+        size: 36
+    }
+}
+const font = config.font.weight + ' ' + config.font.size + 'px ' + config.font.family
+const defaultTheme = {
+
+}
+const themes = {
+    noBikes: {
+        background: '#5F0000',
+        border: '#005FD1',
+        text: '#FFFFFF'
+    },
+    defaultTheme: {
+        background: '#005FD1',
+        border: '#005FD1',
+        text: '#FFFFFF'
+    }
+}
+const textCache = {}
+const textDimension = function (text, font, radius) {
+    const id = text + ':' + font + ':' + radius
+    if (typeof textCache[id] === 'object') { return textCache[id] }
+    const canvas = document.createElement('canvas')
+    canvas.width = radius
+    canvas.height = radius
+    const context = canvas.getContext('2d')
+    context.font = font
+    context.fillStyle = '#000'
+    const x = 10
+    context.fillText(text, x, radius - 20)
+    const textData = context.getImageData(0, 0, radius, radius).data
+    let c = radius + 1
+    let l = -1
+    let f = -1
+    let d = radius + 1
+    for (let h = 0; h < radius; h++) {
+        for (let p = 0; p < radius; p++) {
+            let m = 4 * (h * radius + p)
+            let g = textData[m]
+            let v = textData[m + 1]
+            let y = textData[m + 2]
+            let b = textData[m + 3]
+            if (!(g === 0 && v === 0 && y === 0 && b === 0)) {
+                if (c > p) {
+                    c = p
+                }
+                if (l < p) {
+                    l = p
+                }
+                if (d > h) {
+                    d = h
+                }
+                if (f < h) {
+                    f = h
+                }
+            }
+        }
+    }
+    const width = l - c
+    const height = f - d
+    textCache[id] = {
+        width,
+        height,
+        xDelta: c - x
+    }
+    return textCache[id]
+}
+const generateCircle = (theme) => {
+    const canvas = document.createElement('canvas')
+    canvas.width = config.size
+    canvas.height = config.size
+    const context = canvas.getContext('2d')
+    context.beginPath()
+    context.fillStyle = theme.background
+    context.strokeStyle = theme.border
+    context.lineWidth = config.strokeWidth
+    context.arc(config.size / 2, config.size / 2, config.size / 2 - config.strokeWidth / 2, 0, 2 * Math.PI, !1)
+    context.fill()
+    context.stroke()
+    return canvas
+}
+
 
 //directions
 var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -449,6 +539,7 @@ var travelModes = {
 };
 
 
+//functions
 function filterMarkers(category)    {
     var categories = $(".chk-btn").toArray().filter(function(elm){
         return elm.checked
@@ -465,9 +556,14 @@ function filterMarkers(category)    {
             else{
                 marker.setVisible(false);
             }
-
         }
-    };
+        bysykkelMarkers.forEach(s => {
+            if(categories.includes("transport")){
+                filterBysykkelStationsOnDistance();
+            }
+        })
+
+    }
 
 window.onload = function () {
     map = new google.maps.Map(document.getElementById('map'), options);
@@ -481,10 +577,18 @@ function initMap() {
     findCenter();
     initMarkers();
     initDirections();
-    bysykkelImportStations();
-    bysykkelLoadAvailability();
-    bysykkelStationsWithAvailability();
-    initBysykkelMarkers();
+    Promise.all([
+        bysykkelImportStations(),
+        bysykkelLoadAvailability()
+    ])
+        .then(() => {
+            bysykkelStationsWithAvailability();
+            initBysykkelMarkers();
+        });
+    availabilityInterval = setInterval(() => {
+            bysykkelLoadAvailability()
+        },
+        6000);
 }
 
 function findCenter() {
@@ -497,7 +601,6 @@ function findCenter() {
 }
 
 function initMarkers() {
-
     for(var i = 0; i < markers.length; i++){
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(markers[i][1], markers[i][2]),
@@ -509,6 +612,7 @@ function initMarkers() {
         });
 
         marker.setVisible(false);
+
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
 
         var infoWindowContent = ('<img id="infoImg" src=markers[i][7]>' + '<div id ="windowBtns"' +
@@ -528,24 +632,33 @@ function initMarkers() {
             return function() {
                 infowindow.close(map, marker);
             }
-        })(marker, i))
+        })(marker, i));
+
+        google.maps.event.addListener(infowindow, 'click', (function(marker, i){
+            return function() {
+                infowindow.close(map, marker);
+            }
+        })(marker, i));
         gMarkers[i] = marker
     }
 }
 
 function initBysykkelMarkers() {
-    this.bysykkelMarkers.forEach(marker => {
+    bysykkelMarkers.forEach(marker => {
         marker.setMap(null);
     });
-    this.bysykkelMarkers = availability.forEach(s =>{
+    bysykkelMarkers = bysykkelStationsWithAvailability().map(s => {
         return new google.maps.Marker({
             position: {
-                lat: s.latitude,
-                lng: s.longitude
+                lat: s.center.latitude,
+                lng: s.center.longitude
             },
-            icon: MapIconGenerator(s.bikes),
+            icon: MapIconGenerator(s.availability.bikes),
             map: this.map,
         })
+    })
+    bysykkelMarkers.forEach(s => {
+        s.setVisible(false);
     })
 }
 
@@ -573,21 +686,22 @@ function initDirections() {
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('right-panel'));
 
+    /*
     document.getElementById('mode').addEventListener('change', function() {
         calculateAndDisplayRoute(directionsService, directionsDisplay);
     });
+    */
 }
 
 function findDirectionsFromButton(i, travelMode) {
-    console.log(markers[i]);
-    //var destination = new google.maps.LatLng(marker[1], marker[2]);
     var directionRequest = {
         origin: userPosition,
         destination: {
             lat: markers[i][1],
             lng: markers[i][2]
         },
-        travelMode: travelMode
+        travelMode: travelMode,
+        provideRouteAlternatives: true
     };
     directionsService.route(directionRequest,
         function(response, status) {
@@ -597,6 +711,7 @@ function findDirectionsFromButton(i, travelMode) {
                 window.alert('Directions request failed due to ' + status);
             }
         });
+    infowindow.close();
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
@@ -622,26 +737,23 @@ function infoLink(markerNumber){
             window.location.replace(markers[i][6]);
         }
     }
+    infowindow.close();
 }
 
 //Bysykkel
 function bysykkelImportStations() {
-    axios.get('http://188.166.72.34:8080/stations')
+    return axios.get('http://188.166.72.34:8080/stations')
         .then(response => {
             stations = response.data;
         })
         .catch(e => {
             this.errors.push(e);
         });
-    availabilityInterval = setInterval(() => {
-            bysykkelLoadAvailability()
-        },
-        6000);
 
 }
 
 function bysykkelLoadAvailability() {
-    axios.get('http://188.166.72.34:8080/stations/availability/')
+    return axios.get('http://188.166.72.34:8080/stations/availability/')
         .then(response => {
             availability = response.data.reduce((result, item) => {
                 result[item.id] = item;
@@ -655,9 +767,52 @@ function bysykkelLoadAvailability() {
 
 function bysykkelStationsWithAvailability() {
     return stations.map(station => {
-        console.log(station);
         return {...station, availability: availability[station.id]}
     })
+}
+
+function MapIconGenerator(text = null, theme = defaultTheme) {
+    text = '' +text
+    if (text === '0') {
+        theme = themes.noBikes;
+    }
+    else{
+        theme = themes.defaultTheme
+    }
+
+    const circle = generateCircle(theme)
+    if (text !== null) {
+        const context = circle.getContext('2d')
+        text = text.substring(0, 3)
+        context.beginPath()
+        context.font = font
+        const textSize = textDimension(text, font, config.size)
+        context.fillStyle = theme.text
+        context.fillText(text, config.size / 2 - textSize.width / 2 - textSize.xDelta, config.size / 2 + textSize.height / 2)
+    }
+    return {
+        url: circle.toDataURL(),
+        scaledSize: {
+            height: config.size / 3,
+            width: config.size / 3
+        }
+    }
+}
+
+function filterBysykkelStationsOnDistance() {
+    var userMarker = new google.maps.Marker({
+        position: userPosition,
+    });
+    bysykkelMarkers.forEach(bysykkelMarker => {
+        gMarkers.forEach(marker =>{
+            if((google.maps.geometry.spherical.computeDistanceBetween(marker.getPosition(), bysykkelMarker.getPosition()) < 400) ||
+                (google.maps.geometry.spherical.computeDistanceBetween(userMarker.getPosition() , bysykkelMarker.getPosition()) < 400)
+            ){
+                bysykkelMarker.setVisible(true);
+            };
+
+        })
+    });
 }
 
 
