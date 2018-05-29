@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+            <state relative-caret-position="403">
+              <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -156,8 +156,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="599" column="9" lean-forward="true" selection-start-line="599" selection-start-column="9" selection-end-line="599" selection-end-column="9" />
+            <state relative-caret-position="464">
+              <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
               <folding>
                 <element signature="e#38#40#0" />
                 <element signature="e#485#487#0" />
@@ -172,6 +172,31 @@
                 <element signature="n#!!block;n#calculateAndDisplayRoute#0" />
                 <element signature="n#!!block;n#bysykkelImportStations#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kvadraturen.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kvadraturen.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="419" column="15" lean-forward="true" selection-start-line="419" selection-start-column="15" selection-end-line="419" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="brenneriveien.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/brenneriveien.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5091" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vulkantrening.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vulkantrening.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1311">
+              <caret line="160" column="15" lean-forward="true" selection-start-line="160" selection-start-column="15" selection-end-line="160" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -197,8 +222,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5040">
-              <caret line="336" column="22" selection-start-line="336" selection-start-column="22" selection-end-line="336" selection-end-column="22" />
+            <state relative-caret-position="5415">
+              <caret line="361" column="22" selection-start-line="361" selection-start-column="22" selection-end-line="361" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -229,7 +254,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="386" />
     <option name="y" value="27" />
     <option name="width" value="1114" />
@@ -376,15 +401,15 @@
       <workItem from="1527339078424" duration="3751000" />
       <workItem from="1527422335959" duration="28888000" />
       <workItem from="1527585426775" duration="4566000" />
-      <workItem from="1527591472255" duration="3803000" />
+      <workItem from="1527591472255" duration="5741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48050000" />
+    <option name="totallyTimeSpent" value="49988000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="386" y="27" width="1114" height="715" extended-state="0" />
+    <frame x="386" y="27" width="1114" height="715" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.012567325" />
@@ -1219,8 +1244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5040">
-          <caret line="336" column="22" selection-start-line="336" selection-start-column="22" selection-end-line="336" selection-end-column="22" />
+        <state relative-caret-position="5415">
+          <caret line="361" column="22" selection-start-line="361" selection-start-column="22" selection-end-line="361" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1238,10 +1263,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kvadraturen.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="419" column="15" lean-forward="true" selection-start-line="419" selection-start-column="15" selection-end-line="419" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brenneriveien.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5091" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vulkantrening.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311">
+          <caret line="160" column="15" lean-forward="true" selection-start-line="160" selection-start-column="15" selection-end-line="160" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="599" column="9" lean-forward="true" selection-start-line="599" selection-start-column="9" selection-end-line="599" selection-end-column="9" />
+        <state relative-caret-position="464">
+          <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
           <folding>
             <element signature="e#38#40#0" />
             <element signature="e#485#487#0" />
@@ -1261,8 +1305,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        <state relative-caret-position="403">
+          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
         </state>
       </provider>
     </entry>
