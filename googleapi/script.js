@@ -48,6 +48,7 @@ var markers = [
     ['SiO Athletica Centrum', 59.9186627, 10.731186, 29, 'gym', 'gym-marker.png', 'http://dogs.com']
 
 ];
+var bysykkelMarkers = [];
 var center = {
     lat: 0,
     lng: 0
@@ -425,7 +426,14 @@ var marker, i;
 var icon;
 var userPosition;
 
+//bysykkel
+var stations = [];
+var availability = [];
+var availabilityInterval;
 
+//directions
+var directionsDisplay = new google.maps.DirectionsRenderer;
+var directionsService = new google.maps.DirectionsService;
 
 
 function filterMarkers(category)    {
@@ -439,7 +447,6 @@ function filterMarkers(category)    {
             category = markers[i][4];
 
            if(categories.includes(category)){
-
                 marker.setVisible(true);
             }
             else{
@@ -457,10 +464,14 @@ window.onload = function () {
 $(".chk-btn").on('change', filterMarkers)
 
 function initMap() {
-    findUserPosition()
+    findUserPosition();
     findCenter();
     initMarkers();
-    initDirections()
+    initDirections();
+    bysykkelImportStations();
+    bysykkelLoadAvailability();
+    bysykkelStationsWithAvailability();
+    initBysykkelMarkers();
 }
 
 function findCenter() {
@@ -501,6 +512,22 @@ function initMarkers() {
     }
 }
 
+function initBysykkelMarkers() {
+    this.bysykkelMarkers.forEach(marker => {
+        marker.setMap(null);
+    });
+    this.bysykkelMarkers = availability.forEach(s =>{
+        return new google.maps.Marker({
+            position: {
+                lat: s.latitude,
+                lng: s.longitude
+            },
+            icon: MapIconGenerator(s.bikes),
+            map: this.map,
+        })
+    })
+}
+
 function findUserPosition() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -517,15 +544,11 @@ function findUserPosition() {
             );
             this.map.setCenter(pos);
             userPosition = pos;
-            console.log(userPosition)
         })
     }
 }
 
 function initDirections() {
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    var directionsService = new google.maps.DirectionsService;
-
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('right-panel'));
 
@@ -534,14 +557,29 @@ function initDirections() {
     });
 }
 
+function findDirectionsFromButton(marker, travelMode) {
+    var directionRequest = {
+        origin: userPosition,
+        destination: {
+            lat: marker[1],
+            lng: marker[2]
+        } ,
+        travelMode: google.maps.TravelMode[travelMode]
+    };
+    directionsService.route(directionRequest,
+        function(response, status) {
+            if (status == 'OK') {
+                directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+}
+
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     var selectedMode = document.getElementById('mode').value;
-    console.log(userPosition)
     directionsService.route({
-        origin : {
-            lat : userPosition.lat,
-            lng : userPosition.lng
-        },
+        origin : userPosition,
         destination: {lat: 59.9233391, lng: 10.7503081},
         travelMode: google.maps.TravelMode[selectedMode]
     }, function(response, status) {
@@ -568,5 +606,45 @@ function infoLink(markerNumber){
 
     }
 }
+
+//Bysykkel
+function bysykkelImportStations() {
+    axios.get('http://188.166.72.34:8080/stations')
+        .then(response => {
+            stations = response.data;
+        })
+        .catch(e => {
+            this.errors.push(e);
+        });
+    availabilityInterval = setInterval(() => {
+            bysykkelLoadAvailability()
+        },
+        6000);
+
+}
+
+function bysykkelLoadAvailability() {
+    axios.get('http://188.166.72.34:8080/stations/availability/')
+        .then(response => {
+            availability = response.data.reduce((result, item) => {
+                result[item.id] = item;
+                return result;
+            }, {});
+        })
+        .catch(e => {
+            this.errors.push(e);
+        });
+}
+
+function bysykkelStationsWithAvailability() {
+    return stations.map(station => {
+        console.log(station);
+        return {...station, availability: availability[station.id]}
+    })
+}
+
+
+
+
 
 
