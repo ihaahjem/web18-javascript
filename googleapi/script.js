@@ -61,6 +61,8 @@ var center = {
 };
 var options = {
     zoom:15,
+    maxZoom : 17,
+    minZoom: 13,
     center: {
         lat: center.lat,
         lng: center.lng
@@ -428,7 +430,6 @@ var options = {
 };
 var map;
 var infowindow = new google.maps.InfoWindow();
-var marker;
 var icon;
 var userPosition;
 
@@ -440,6 +441,12 @@ var availabilityInterval;
 //directions
 var directionsDisplay = new google.maps.DirectionsRenderer;
 var directionsService = new google.maps.DirectionsService;
+var travelModes = {
+    bike : 'BICYCLING',
+    walk : 'WALKING',
+    drive : 'DRIVING',
+    transit : 'TRANSIT'
+};
 
 
 function filterMarkers(category)    {
@@ -490,8 +497,9 @@ function findCenter() {
 }
 
 function initMarkers() {
+
     for(var i = 0; i < markers.length; i++){
-        marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
             position: new google.maps.LatLng(markers[i][1], markers[i][2]),
             map: map,
             icon: icon = {
@@ -502,7 +510,14 @@ function initMarkers() {
 
         marker.setVisible(false);
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
-        var infoWindowContent = ('<p>Event Name: "+markers[i][0]"</p>' + '<button id="info-btn" onclick="infoLink(' + i + ')">More info</button>');
+
+        var infoWindowContent = ('<p>Event Name: "+markers[i][0]"</p>' +
+            '<button id="bike-btn" onclick="findDirectionsFromButton('+ i +', travelModes.bike)">Sykle</button>' +
+            '<button id="walk-btn" onclick="findDirectionsFromButton('+ i +', travelModes.walk)">Gå</button>' +
+            '<button id="drive-btn" onclick="findDirectionsFromButton('+ i +', travelModes.drive)">Miljøsvin</button>' +
+            '<button id="transit-btn" onclick="findDirectionsFromButton('+ i +', travelModes.transit)">Offentlig transport</button>' +
+            '<button id="info-btn" onclick="infoLink(' + i + ')">More info</button>');
+
             return function() {
                 infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
@@ -563,14 +578,16 @@ function initDirections() {
     });
 }
 
-function findDirectionsFromButton(marker, travelMode) {
+function findDirectionsFromButton(i, travelMode) {
+    console.log(markers[i]);
+    //var destination = new google.maps.LatLng(marker[1], marker[2]);
     var directionRequest = {
         origin: userPosition,
         destination: {
-            lat: marker[1],
-            lng: marker[2]
-        } ,
-        travelMode: google.maps.TravelMode[travelMode]
+            lat: markers[i][1],
+            lng: markers[i][2]
+        },
+        travelMode: travelMode
     };
     directionsService.route(directionRequest,
         function(response, status) {
