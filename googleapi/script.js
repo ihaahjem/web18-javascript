@@ -509,7 +509,8 @@ function initMarkers() {
             '<button id="bike-btn" onclick="findDirectionsFromButton('+ i +', travelModes.bike)">Sykle</button>' +
             '<button id="walk-btn" onclick="findDirectionsFromButton('+ i +', travelModes.walk)">Gå</button>' +
             '<button id="drive-btn" onclick="findDirectionsFromButton('+ i +', travelModes.drive)">Miljøsvin</button>' +
-            '<button id="transit-btn" onclick="findDirectionsFromButton('+ i +', travelModes.transit)">Offentlig transport</button>');
+            '<button id="transit-btn" onclick="findDirectionsFromButton('+ i +', travelModes.transit)">Offentlig transport</button>' +
+            '<button id="info-btn" onclick="infoLink(' + i + ')">More info</button>');
 
             return function() {
                 infowindow.setContent(infoWindowContent);
@@ -608,19 +609,12 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 }
 
 function infoLink(markerNumber){
-    console.log(markerNumber)
-    var categories = $("info-btn").toArray().filter(function(inf){
-        return inf.checked
-    }).map(function (value) {
-        console.log(value.id);
-        return value.id
-    });
-    for(i = 0; i < markers.length; i++){
-        markerNumber = markers[i][3];
-        if(categories.includes(markerNumber)){
+    console.log(markerNumber);
+
+    for(var i = 0; i < markers.length; i++){
+        if(markerNumber === markers[i][3]){
             window.location.replace(markers[i][6]);
         }
-
     }
 }
 
