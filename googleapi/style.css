@@ -120,5 +120,41 @@ input.info-btn+label[for=moreInfo]:active, input.info-btn:checked+label[for=more
     background: #870401;
 }
 
+#windowBtns{
+    position:relative;
+    height:200px;
+    width:200px;
+    background-color: #4CAF50;
+    display:block;
+
+}
+
+.windowBtnClass{
+    position:relative;
+    width:30px;
+    height:10px;
+    top:160px;
+}
+
+#bike-btn{
+    left:0px;
+}
+
+#walk-btn{
+    left:30px;
+}
+
+#drive-btn{
+    left:60px;
+}
+
+#transit-btn{
+    left:90px;
+}
+
+#info-btn{
+    left:120px;
+}
+
 
 
