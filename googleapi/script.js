@@ -496,7 +496,7 @@ function initMarkers() {
 
         marker.setVisible(false);
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
-        var infoWindowContent = ('<p>Event Name: "+markers[i][0]"</p>' + '<button id="info-btn" onclick="infoLink()">More info</button>');
+        var infoWindowContent = ('<p>Event Name: "+markers[i][0]"</p>' + '<button id="info-btn" onclick="infoLink(' + i + ')">More info</button>');
             return function() {
                 infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
@@ -592,19 +592,12 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 }
 
 function infoLink(markerNumber){
-    console.log(markerNumber)
-    var categories = $("info-btn").toArray().filter(function(inf){
-        return inf.checked
-    }).map(function (value) {
-        console.log(value.id);
-        return value.id
-    });
-    for(i = 0; i < markers.length; i++){
-        markerNumber = markers[i][3];
-        if(categories.includes(markerNumber)){
+    console.log(markerNumber);
+
+    for(var i = 0; i < markers.length; i++){
+        if(markerNumber === markers[i][3]){
             window.location.replace(markers[i][6]);
         }
-
     }
 }
 
