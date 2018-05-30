@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e36d2451-ca32-4545-b31d-cf28faa3dc3a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/googleapi/blaa-dot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/angst.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/bar-&amp;-bowling.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/bari-pizza.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/cafe-&amp;-sor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/cafe-sara.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/crow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/hk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/kniven.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/kulturhuset.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/munchies.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/peloton.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/peretroika.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/t&amp;j.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/taco-republica.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/tilt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/vafler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/verkstedet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/googleapi/infovindu-bilder/wurst.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/googleapi/supermarkets.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +19,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleapi/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+            <state relative-caret-position="211">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
               </folding>
@@ -49,11 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="supermarkets.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/googleapi/supermarkets.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="767" column="21" lean-forward="true" selection-start-line="767" selection-start-column="21" selection-end-line="767" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleapi/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="472" column="46" lean-forward="true" selection-start-line="472" selection-start-column="46" selection-end-line="472" selection-end-column="46" />
+            <state relative-caret-position="315">
+              <caret line="475" column="15" selection-start-line="475" selection-start-column="15" selection-end-line="475" selection-end-column="15" />
               <folding>
                 <element signature="e#53#6781#0" />
                 <element signature="e#36#38#0" />
@@ -348,6 +336,7 @@
         <option value="$PROJECT_DIR$/googleapi/style.css" />
         <option value="$PROJECT_DIR$/googleapi/index.html" />
         <option value="$PROJECT_DIR$/googleapi/script.js" />
+        <option value="$PROJECT_DIR$/googleapi/supermarkets.js" />
       </list>
     </option>
   </component>
@@ -428,18 +417,18 @@
       <updated>1527163115054</updated>
       <workItem from="1527163116260" duration="897000" />
       <workItem from="1527238036045" duration="10101000" />
-      <workItem from="1527605095625" duration="33084000" />
+      <workItem from="1527605095625" duration="33790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91726000" />
+    <option name="totallyTimeSpent" value="92432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="-3" width="1551" height="903" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12989557" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -1172,20 +1161,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googleapi/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="472" column="46" lean-forward="true" selection-start-line="472" selection-start-column="46" selection-end-line="472" selection-end-column="46" />
+        <state relative-caret-position="315">
+          <caret line="475" column="15" selection-start-line="475" selection-start-column="15" selection-end-line="475" selection-end-column="15" />
           <folding>
             <element signature="e#53#6781#0" />
             <element signature="e#36#38#0" />
@@ -1434,6 +1413,23 @@
             <element signature="e#36491#36851#0" />
             <element signature="e#36769#36841#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleapi/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleapi/supermarkets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="767" column="21" lean-forward="true" selection-start-line="767" selection-start-column="21" selection-end-line="767" selection-end-column="21" />
         </state>
       </provider>
     </entry>
