@@ -16,6 +16,7 @@
     width: 20%;
 }
 
+
 #floating-panel {
     position: absolute;
     top: 10px;
@@ -53,7 +54,6 @@ input.chk-btn + label{
 input#school + label[for=school]{
     top:250px;
     left:0;
-
 }
 
 input#food + label[for=food]{
@@ -61,7 +61,7 @@ input#food + label[for=food]{
     left:0;
 }
 
-input#transport + label[for=transport]{
+input#bysykkel + label[for=bysykkel]{
     top: 350px;
     left:0;
 }
@@ -73,6 +73,11 @@ input#bar + label[for=bar]{
 
 input#gym + label[for=gym]{
     top: 450px;
+    left:0;
+}
+
+input#kollektivt + label[for=kollektivt]{
+    top: 500px;
     left:0;
 }
 
