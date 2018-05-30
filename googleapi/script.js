@@ -680,7 +680,7 @@ function findUserPosition() {
                     map: this.map,
                     title: "Her er du",
                     icon: userMarker = {
-                        scaledSize: new google.maps.Size(15, 15),
+                        scaledSize: new google.maps.Size(30, 30),
                         url: "blaa-dot.png"
                     }
                 }
