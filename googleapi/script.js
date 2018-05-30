@@ -1,5 +1,6 @@
 
 var gMarkers = [];
+var kMarkers = [];
 var markers = [
 
 //
@@ -50,9 +51,26 @@ var markers = [
     ['Fitness24Seven', 59.9138303, 10.7455569, 33, 'gym', 'gym-marker.png', 'http://dogs.com'],
     ['SATS Akersgata', 59.914745, 10.7432694, 34, 'gym', 'gym-marker.png', 'http://dogs.com'],
     ['Fresh Fitness St Hanshaugen', 59.925468, 10.7454316, 35, 'gym', 'gym-marker.png', 'http://dogs.com']
-
-
 ];
+
+var kollektivtMarkers = [
+    //kollektivt
+    ['Heimdalsgata',    59.918500, 10.761413, 'holdeplass', ['fjerdingen'],             ['trikk', 'buss'], ['17'],                  ['30', '31', '31E', 'N390']],
+    ['Hausmannsgate',   59.918339, 10.760560, 'holdeplass', ['fjerdingen'],             ['trikk', 'buss'], ['11', '12', '13', '17'],['30', '31', '31E', 'N11', 'N12', 'N390']],
+    ['Lakkegata skole', 59.920629, 10.768365, 'holdeplass', ['fjerdingen'],             ['trikk', 'buss'], ['17'],                  ['31', '31E', 'N390']],
+    ['Vahls gate',      59.916069, 10.763558, 'holdeplass', ['fjerdingen'],             ['buss'],          [],                      ['380', '390', '390E'], []],
+    ['Grønland T-bane', 59.918339, 10.760560, 'holdeplass', ['fjerdingen'],             ['t-bane'],        [],                      [],                             ['1', '2', '3', '4', '5']],
+    ['Brugata',         59.914780, 10.753317, 'holdeplass', ['fjerdingen'],             ['trikk', 'buss'], ['11', '12', '13', '17'],['30', '31', '31E', '34', '54', 'N11', 'N12', 'N390']],
+    ['Hammersborggata', 59.915000, 10.752212, 'holdeplass', ['fjerdingen'],             ['buss'],          [],                      ['150', '160', '250', '250E', '255E', '265E', 'N1', 'N2', 'N11', 'N18', 'N130', 'N140', 'N250']],
+    ['Dronningensgate', 59.910753, 10.746503, 'holdeplass', ['kvadradturen'],           ['trikk'],         ['12', '13', '19'],      [], []],
+    ['Øvre Slottsgate', 59.912216, 10.741954, 'holdeplass', ['kvadradturen'],           ['trikk'],         ['12', '13', '19'],      [], []],
+    ['Wessels Plass',   59.912087, 10.738758, 'holdeplass', ['kvadradturen'],           ['trikk'],         ['12', '13', '19'],      [], []],
+    ['Stortinget',      59.913797, 10.740925, 'holdeplass', ['kvadradturen'],           ['t-bane'],        [],                      [],                               ['1', '2', '3', '4', '5']],
+    ['Møllerveien',     59.920786, 10.751499, 'holdeplass', ['vulkan'],                 ['buss'],                                   ['34', '54']],
+    ['Schous Plass',    59.921044, 10.759481, 'holdeplass', ['vulkan', 'fjerdingen'],   ['trikk'], ['11', '12', '13', '19']],
+    ['Jernbanetorget',  59.912022, 10.750408, 'holdeplass', ['fjerdingen', 'kvadradturen', 'vulkan', 'brenneriveien'], ['trikk', 'buss', 't-bane'], ['11', '12', '13', '17', '18', '19'],['30', '31', '31E', '36E', '54', 'N5', 'N12', 'N30'], ['1', '2', '3', '4', '5']]
+];
+
 var bysykkelMarkers = [];
 var center = {
     lat: 0,
@@ -428,11 +446,37 @@ var options = {
     mapTypeControl : false
 };
 
-var map;
-var infowindow = new google.maps.InfoWindow();
-var icon;
-var userPosition;
 
+var fjerdingenMarker = new google.maps.Marker({
+    position: {
+        lat: 59.916224,
+        lng: 10.759697
+    }
+});
+var vulkanMarker = new google.maps.Marker({
+    position: {
+        lat: 59.9233391,
+        lng: 10.7503081
+    }
+});
+var kvadratturenMarker = new google.maps.Marker({
+    position: {
+        lat: 59.911015,
+        lng: 10.7439543
+    }
+});
+var brenneriveienMarker = new google.maps.Marker({
+    position: {
+        lat: 59.920352,
+        lng: 10.7506041
+    }
+});
+
+var map;
+var icon;
+var infowindow = new google.maps.InfoWindow();
+var userPosition;
+var userMarker;
 
 //bysykkel
 var stations = [];
@@ -530,6 +574,9 @@ const generateCircle = (theme) => {
 
 //directions
 var directionsDisplay = new google.maps.DirectionsRenderer;
+directionsDisplay.setOptions({
+    preserveViewport: true
+});
 var directionsService = new google.maps.DirectionsService;
 var travelModes = {
     bike : 'BICYCLING',
@@ -557,11 +604,23 @@ function filterMarkers(category)    {
                 marker.setVisible(false);
             }
         }
-        bysykkelMarkers.forEach(s => {
-            if(categories.includes("transport")){
+            if(categories.includes("bysykkel")){
                 filterBysykkelStationsOnDistance();
             }
-        })
+            else{
+                bysykkelMarkers.forEach(s => {
+                    s.setVisible(false);
+                })
+            }
+
+            if(categories.includes("kollektivt")){
+                kMarkers.forEach(s => s.setVisible(true));
+            }
+            else{
+                kMarkers.forEach(s => {
+                    s.setVisible(false);
+                })
+            }
 
     }
 
@@ -576,6 +635,7 @@ function initMap() {
     findUserPosition();
     findCenter();
     initMarkers();
+    initKollektivMarkers();
     initDirections();
     Promise.all([
         bysykkelImportStations(),
@@ -592,7 +652,7 @@ function initMap() {
 }
 
 function findCenter() {
-    for (var i = 0; i < markers.length; i++) {
+    for (var i = 0; i < 4; i++) {
         center.lat += markers[i][1];
         center.lng += markers[i][2];
     }
@@ -613,6 +673,10 @@ function initMarkers() {
 
         marker.setVisible(false);
 
+        if(i < 4){
+            marker.setVisible(true)
+        }
+
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
 
         var infoWindowContent = ('<p>Event Name: "+markers[i][0]"</p>' +
@@ -626,8 +690,14 @@ function initMarkers() {
                 infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
             }
-        })(marker, i))
-
+        })(marker, i));
+        //TODO skal denne være med?
+/*
+        google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
+            setTimeout(function() {
+                infowindow.close()},1000);
+            }));
+*/
         google.maps.event.addListener(map, 'click', (function(marker, i){
             return function() {
                 infowindow.close(map, marker);
@@ -662,6 +732,78 @@ function initBysykkelMarkers() {
     })
 }
 
+function initKollektivMarkers() {
+    var kollektivtMarkers = [
+        //kollektivt
+        ['Heimdalsgata', 59.918500, 10.761413, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['17'], ['30', '31', '31E', 'N390']],
+        ['Hausmannsgate', 59.918339, 10.760560, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['11', '12', '13', '17'], ['30', '31', '31E', 'N11', 'N12', 'N390']],
+        ['Lakkegata skole', 59.920629, 10.768365, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['17'], ['31', '31E', 'N390']],
+        ['Vahls gate', 59.916069, 10.763558, 'holdeplass', ['fjerdingen'], ['buss'], [], ['380', '390', '390E'], []],
+        ['Grønland T-bane', 59.918339, 10.760560, 'holdeplass', ['fjerdingen'], ['t-bane'], [], [], ['1', '2', '3', '4', '5']],
+        ['Brugata', 59.914780, 10.753317, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['11', '12', '13', '17'], ['30', '31', '31E', '34', '54', 'N11', 'N12', 'N390']],
+        ['Hammersborggata', 59.915000, 10.752212, 'holdeplass', ['fjerdingen'], ['buss'], [], ['150', '160', '250', '250E', '255E', '265E', 'N1', 'N2', 'N11', 'N18', 'N130', 'N140', 'N250']],
+        ['Dronningensgate', 59.910753, 10.746503, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
+        ['Øvre Slottsgate', 59.912216, 10.741954, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
+        ['Wessels Plass', 59.912087, 10.738758, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
+        ['Stortinget', 59.913797, 10.740925, 'holdeplass', ['kvadradturen'], ['t-bane'], [], [], ['1', '2', '3', '4', '5']],
+        ['Møllerveien', 59.920786, 10.751499, 'holdeplass', ['vulkan'], ['buss'], ['34', '54']],
+        ['Schous Plass', 59.921044, 10.759481, 'holdeplass', ['vulkan', 'fjerdingen'], ['trikk'], ['11', '12', '13', '19']],
+        ['Jernbanetorget', 59.912022, 10.750408, 'holdeplass', ['fjerdingen', 'kvadradturen', 'vulkan', 'brenneriveien'], ['trikk', 'buss', 't-bane'], ['11', '12', '13', '17', '18', '19'], ['30', '31', '31E', '36E', '54', 'N5', 'N12', 'N30'], ['1', '2', '3', '4', '5']]
+    ];
+
+    for (var j = 0; j < kollektivtMarkers.length; j++) {
+        var marker = new google.maps.Marker({
+            position: {
+                lat: kollektivtMarkers[j][1],
+                lng: kollektivtMarkers[j][2]
+            },
+            map: this.map,
+        })
+        kMarkers.push(marker);
+
+        marker.setVisible(false);
+
+        google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
+            var trikkIconSrc;
+            var bussIconSrc;
+            var tbaneIconSrc;
+
+
+            var trikkDivString;
+            var bussDivString;
+            var tbaneDivString;
+            var infoWindowHtml;
+
+
+            if(kollektivtMarkers[j][5].includes('trikk')){
+                trikkDivString =
+                    '<div id="trikkDiv">'+trikkIconSrc+
+                    kollektivtMarkers[j][6].forEach(s => {
+                        '<label for=trikkboks>'+s+'</label>'
+                    });
+
+                    '</div>';
+
+            }
+            if (kollektivtMarkers[j][5].includes('buss')){
+                bussDivString = '<div id="bussDiv">'+bussIconSrc+'</div>';
+            }
+            if (kollektivtMarkers[j][5].includes('tbane')){
+                tbaneDivString = '<div id="tbaneDiv">'+tbaneIconSrc+'</div>';
+            }
+
+
+            var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>')
+
+
+            return function () {
+                infowindow.setContent(infoWindowContent);
+                infowindow.open(map, marker);
+            }
+        })(marker, j));
+    }
+}
+
 function findUserPosition() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -676,8 +818,11 @@ function findUserPosition() {
                     title: "Her er du"
                 }
             );
-            this.map.setCenter(pos);
+            this.map.setCenter(center);
             userPosition = pos;
+            userMarker = new google.maps.Marker({
+                position: userPosition,
+            });
         })
     }
 }
@@ -712,21 +857,6 @@ function findDirectionsFromButton(i, travelMode) {
             }
         });
     infowindow.close();
-}
-
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    var selectedMode = document.getElementById('mode').value;
-    directionsService.route({
-        origin : userPosition,
-        destination: {lat: 59.9233391, lng: 10.7503081},
-        travelMode: google.maps.TravelMode[selectedMode]
-    }, function(response, status) {
-        if (status == 'OK') {
-            directionsDisplay.setDirections(response);
-        } else {
-            window.alert('Directions request failed due to ' + status);
-        }
-    });
 }
 
 function infoLink(markerNumber){
@@ -800,23 +930,40 @@ function MapIconGenerator(text = null, theme = defaultTheme) {
 }
 
 function filterBysykkelStationsOnDistance() {
-    var userMarker = new google.maps.Marker({
-        position: userPosition,
-    });
-    bysykkelMarkers.forEach(bysykkelMarker => {
-        gMarkers.forEach(marker =>{
-            if((google.maps.geometry.spherical.computeDistanceBetween(marker.getPosition(), bysykkelMarker.getPosition()) < 400) ||
-                (google.maps.geometry.spherical.computeDistanceBetween(userMarker.getPosition() , bysykkelMarker.getPosition()) < 400)
-            ){
-                bysykkelMarker.setVisible(true);
-            };
 
+    var markersToFilterBysykkelMarkers = gMarkers.map(m => {
+        if( ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), fjerdingenMarker.getPosition())) === 0) ||
+            ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), vulkanMarker.getPosition())) === 0) ||
+            ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), kvadratturenMarker.getPosition())) === 0) ||
+            ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), brenneriveienMarker.getPosition())) === 0)
+        ){
+            return m;
+        }
+    }).filter(m => {
+        return m !== undefined;
+    });
+
+    markersToFilterBysykkelMarkers.forEach(s => {
+        if(s === undefined){
+            console.log('hei');
+        }
+    });
+
+    bysykkelMarkers.forEach(s => {
+        if(s === undefined){
+            console.log('hei');
+        }
+    });
+
+    bysykkelMarkers.forEach(bysykkelMarker => {
+        markersToFilterBysykkelMarkers.forEach(marker => {
+                if ((google.maps.geometry.spherical.computeDistanceBetween(marker.getPosition(), bysykkelMarker.getPosition()) < 450) ||
+                    (google.maps.geometry.spherical.computeDistanceBetween(userMarker.getPosition(), bysykkelMarker.getPosition()) < 450)) {
+                    bysykkelMarker.setVisible(true);
+                }
         })
     });
+
+
 }
-
-
-
-
-
 

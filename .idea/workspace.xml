@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e36d2451-ca32-4545-b31d-cf28faa3dc3a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/MapIconGenerator.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/googleapi/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/googleapi/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/googleapi/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleapi/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="16">
+              <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
               </folding>
@@ -34,10 +33,9 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/googleapi/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="808" column="96" selection-start-line="808" selection-start-column="96" selection-end-line="808" selection-end-column="96" />
+            <state relative-caret-position="584">
+              <caret line="784" column="20" lean-forward="true" selection-start-line="784" selection-start-column="20" selection-end-line="784" selection-end-column="20" />
               <folding>
-                <element signature="e#33#3626#0" />
                 <element signature="e#36#38#0" />
                 <element signature="e#483#485#0" />
                 <element signature="e#1385#1387#0" />
@@ -164,6 +162,14 @@
                 <element signature="e#12551#12717#0" />
                 <element signature="e#12569#12627#0" />
                 <element signature="e#12645#12703#0" />
+                <element signature="e#12954#13046#0" />
+                <element signature="e#12974#13040#0" />
+                <element signature="e#13095#13189#0" />
+                <element signature="e#13115#13183#0" />
+                <element signature="e#13244#13337#0" />
+                <element signature="e#13264#13331#0" />
+                <element signature="e#13393#13486#0" />
+                <element signature="e#13413#13480#0" />
                 <element signature="e#13061#13185#0" />
                 <element signature="e#13107#13183#0" />
                 <element signature="e#13295#13299#0" />
@@ -180,20 +186,32 @@
                 <element signature="e#14707#14752#0" />
                 <element signature="e#14852#14912#0" />
                 <element signature="e#14975#15454#0" />
+                <element signature="e#15493#15523#0" />
                 <element signature="e#13108#13204#0" />
+                <element signature="e#16334#16390#0" />
                 <element signature="e#13746#13836#0" />
-                <element signature="n#!!block;n#initMap#0" />
+                <element signature="e#14090#14174#0" />
+                <element signature="e#14188#14212#0" />
+                <element signature="e#14315#14365#0" />
                 <element signature="n#!!block;n#findCenter#0" />
                 <element signature="e#14187#14268#0" />
-                <element signature="n#!!block;n#initMarkers#0" />
+                <element signature="e#14578#14686#0" />
+                <element signature="e#18256#18303#0" />
+                <element signature="e#15491#15610#0" />
+                <element signature="e#18438#18619#0" />
+                <element signature="e#18693#18797#0" />
+                <element signature="e#18725#18787#0" />
                 <element signature="e#15905#16009#0" />
                 <element signature="e#15937#15999#0" />
                 <element signature="n#!!block;n#initBysykkelMarkers#1" />
+                <element signature="e#19120#19156#0" />
+                <element signature="e#26699#26806#0" />
                 <element signature="n#!!block;n#findUserPosition#0" />
                 <element signature="e#16529#17027#0" />
                 <element signature="e#16594#17020#0" />
                 <element signature="e#16618#16727#0" />
                 <element signature="e#16798#16926#0" />
+                <element signature="e#20890#20921#0" />
                 <element signature="n#!!block;n#initDirections#0" />
                 <element signature="e#17194#17359#0" />
                 <element signature="n#!!block;n#findDirectionsFromButton#0" />
@@ -202,11 +220,6 @@
                 <element signature="e#17692#17907#0" />
                 <element signature="e#17726#17800#0" />
                 <element signature="e#17806#17897#0" />
-                <element signature="n#!!block;n#calculateAndDisplayRoute#0" />
-                <element signature="e#18101#18253#0" />
-                <element signature="e#18282#18473#0" />
-                <element signature="e#18312#18378#0" />
-                <element signature="e#18384#18467#0" />
                 <element signature="n#!!block;n#infoLink#0" />
                 <element signature="e#18587#18700#0" />
                 <element signature="e#18631#18694#0" />
@@ -214,9 +227,38 @@
                 <element signature="e#18853#18902#0" />
                 <element signature="e#18924#18968#0" />
                 <element signature="n#!!block;n#bysykkelLoadAvailability#0" />
+                <element signature="e#19217#19387#0" />
+                <element signature="e#19285#19371#0" />
+                <element signature="e#19409#19453#0" />
                 <element signature="n#!!block;n#bysykkelStationsWithAvailability#0" />
+                <element signature="e#19540#19645#0" />
                 <element signature="n#!!block;n#MapIconGenerator#0" />
+                <element signature="e#22452#22491#0" />
+                <element signature="e#22500#22543#0" />
+                <element signature="e#22609#22985#0" />
+                <element signature="e#22997#23141#0" />
+                <element signature="e#23052#23135#0" />
+                <element signature="n#!!block;n#filterBysykkelStationsOnDistance#0" />
+                <element signature="e#24180#24343#0" />
+                <element signature="e#24304#24337#0" />
+                <element signature="e#24357#24373#0" />
+                <element signature="e#25009#25025#0" />
+                <element signature="e#25038#25062#0" />
+                <element signature="e#25135#25213#0" />
+                <element signature="e#25164#25207#0" />
+                <element signature="e#24595#25022#0" />
+                <element signature="e#24654#25015#0" />
+                <element signature="e#23409#23441#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/googleapi/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -235,6 +277,9 @@
       <find>school</find>
       <find>bysykkelMarkers</find>
       <find>bysykkelMar</find>
+      <find>gMarkers</find>
+      <find>infowindowcontent</find>
+      <find>center</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -247,9 +292,9 @@
         <option value="$PROJECT_DIR$/googleapi/vulkantrening.json" />
         <option value="$PROJECT_DIR$/googleapi/brenneriveien.json" />
         <option value="$PROJECT_DIR$/googleapi/kvadraturen.json" />
+        <option value="$PROJECT_DIR$/googleapi/MapIconGenerator.js" />
         <option value="$PROJECT_DIR$/googleapi/style.css" />
         <option value="$PROJECT_DIR$/googleapi/index.html" />
-        <option value="$PROJECT_DIR$/googleapi/MapIconGenerator.js" />
         <option value="$PROJECT_DIR$/googleapi/script.js" />
       </list>
     </option>
@@ -261,10 +306,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="828" />
-    <option name="y" value="18" />
-    <option name="width" value="772" />
-    <option name="height" value="882" />
+    <option name="x" value="49" />
+    <option name="y" value="-3" />
+    <option name="width" value="845" />
+    <option name="height" value="903" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -331,18 +376,18 @@
       <updated>1527163115054</updated>
       <workItem from="1527163116260" duration="897000" />
       <workItem from="1527238036045" duration="10101000" />
-      <workItem from="1527605095625" duration="10285000" />
+      <workItem from="1527605095625" duration="32418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68927000" />
+    <option name="totallyTimeSpent" value="91060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="-3" width="1551" height="903" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11618799" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -457,7 +502,6 @@
         <state relative-caret-position="7785">
           <caret line="592" column="32" selection-start-line="592" selection-start-column="32" selection-end-line="592" selection-end-column="32" />
           <folding>
-            <element signature="e#33#3626#0" />
             <element signature="e#36#38#0" />
             <element signature="e#483#485#0" />
             <element signature="e#1385#1387#0" />
@@ -584,6 +628,14 @@
             <element signature="e#12551#12717#0" />
             <element signature="e#12569#12627#0" />
             <element signature="e#12645#12703#0" />
+            <element signature="e#12954#13046#0" />
+            <element signature="e#12974#13040#0" />
+            <element signature="e#13095#13189#0" />
+            <element signature="e#13115#13183#0" />
+            <element signature="e#13244#13337#0" />
+            <element signature="e#13264#13331#0" />
+            <element signature="e#13393#13486#0" />
+            <element signature="e#13413#13480#0" />
             <element signature="e#13061#13185#0" />
             <element signature="e#13107#13183#0" />
             <element signature="e#13295#13299#0" />
@@ -600,20 +652,32 @@
             <element signature="e#14707#14752#0" />
             <element signature="e#14852#14912#0" />
             <element signature="e#14975#15454#0" />
+            <element signature="e#15493#15523#0" />
             <element signature="e#13108#13204#0" />
+            <element signature="e#16334#16390#0" />
             <element signature="e#13746#13836#0" />
-            <element signature="n#!!block;n#initMap#0" />
+            <element signature="e#14090#14174#0" />
+            <element signature="e#14188#14212#0" />
+            <element signature="e#14315#14365#0" />
             <element signature="n#!!block;n#findCenter#0" />
             <element signature="e#14187#14268#0" />
-            <element signature="n#!!block;n#initMarkers#0" />
+            <element signature="e#14578#14686#0" />
+            <element signature="e#18256#18303#0" />
+            <element signature="e#15491#15610#0" />
+            <element signature="e#18438#18619#0" />
+            <element signature="e#18693#18797#0" />
+            <element signature="e#18725#18787#0" />
             <element signature="e#15905#16009#0" />
             <element signature="e#15937#15999#0" />
             <element signature="n#!!block;n#initBysykkelMarkers#1" />
+            <element signature="e#19120#19156#0" />
+            <element signature="e#26699#26806#0" />
             <element signature="n#!!block;n#findUserPosition#0" />
             <element signature="e#16529#17027#0" />
             <element signature="e#16594#17020#0" />
             <element signature="e#16618#16727#0" />
             <element signature="e#16798#16926#0" />
+            <element signature="e#20890#20921#0" />
             <element signature="n#!!block;n#initDirections#0" />
             <element signature="e#17194#17359#0" />
             <element signature="n#!!block;n#findDirectionsFromButton#0" />
@@ -622,11 +686,6 @@
             <element signature="e#17692#17907#0" />
             <element signature="e#17726#17800#0" />
             <element signature="e#17806#17897#0" />
-            <element signature="n#!!block;n#calculateAndDisplayRoute#0" />
-            <element signature="e#18101#18253#0" />
-            <element signature="e#18282#18473#0" />
-            <element signature="e#18312#18378#0" />
-            <element signature="e#18384#18467#0" />
             <element signature="n#!!block;n#infoLink#0" />
             <element signature="e#18587#18700#0" />
             <element signature="e#18631#18694#0" />
@@ -634,8 +693,28 @@
             <element signature="e#18853#18902#0" />
             <element signature="e#18924#18968#0" />
             <element signature="n#!!block;n#bysykkelLoadAvailability#0" />
+            <element signature="e#19217#19387#0" />
+            <element signature="e#19285#19371#0" />
+            <element signature="e#19409#19453#0" />
             <element signature="n#!!block;n#bysykkelStationsWithAvailability#0" />
+            <element signature="e#19540#19645#0" />
             <element signature="n#!!block;n#MapIconGenerator#0" />
+            <element signature="e#22452#22491#0" />
+            <element signature="e#22500#22543#0" />
+            <element signature="e#22609#22985#0" />
+            <element signature="e#22997#23141#0" />
+            <element signature="e#23052#23135#0" />
+            <element signature="n#!!block;n#filterBysykkelStationsOnDistance#0" />
+            <element signature="e#24180#24343#0" />
+            <element signature="e#24304#24337#0" />
+            <element signature="e#24357#24373#0" />
+            <element signature="e#25009#25025#0" />
+            <element signature="e#25038#25062#0" />
+            <element signature="e#25135#25213#0" />
+            <element signature="e#25164#25207#0" />
+            <element signature="e#24595#25022#0" />
+            <element signature="e#24654#25015#0" />
+            <element signature="e#23409#23441#0" />
           </folding>
         </state>
       </provider>
@@ -682,7 +761,6 @@
         <state relative-caret-position="285">
           <caret line="383" column="26" lean-forward="true" selection-start-line="383" selection-start-column="26" selection-end-line="383" selection-end-column="26" />
           <folding>
-            <element signature="e#33#3626#0" />
             <element signature="e#36#38#0" />
             <element signature="e#483#485#0" />
             <element signature="e#1385#1387#0" />
@@ -809,6 +887,14 @@
             <element signature="e#12551#12717#0" />
             <element signature="e#12569#12627#0" />
             <element signature="e#12645#12703#0" />
+            <element signature="e#12954#13046#0" />
+            <element signature="e#12974#13040#0" />
+            <element signature="e#13095#13189#0" />
+            <element signature="e#13115#13183#0" />
+            <element signature="e#13244#13337#0" />
+            <element signature="e#13264#13331#0" />
+            <element signature="e#13393#13486#0" />
+            <element signature="e#13413#13480#0" />
             <element signature="e#13061#13185#0" />
             <element signature="e#13107#13183#0" />
             <element signature="e#13295#13299#0" />
@@ -825,20 +911,32 @@
             <element signature="e#14707#14752#0" />
             <element signature="e#14852#14912#0" />
             <element signature="e#14975#15454#0" />
+            <element signature="e#15493#15523#0" />
             <element signature="e#13108#13204#0" />
+            <element signature="e#16334#16390#0" />
             <element signature="e#13746#13836#0" />
-            <element signature="n#!!block;n#initMap#0" />
+            <element signature="e#14090#14174#0" />
+            <element signature="e#14188#14212#0" />
+            <element signature="e#14315#14365#0" />
             <element signature="n#!!block;n#findCenter#0" />
             <element signature="e#14187#14268#0" />
-            <element signature="n#!!block;n#initMarkers#0" />
+            <element signature="e#14578#14686#0" />
+            <element signature="e#18256#18303#0" />
+            <element signature="e#15491#15610#0" />
+            <element signature="e#18438#18619#0" />
+            <element signature="e#18693#18797#0" />
+            <element signature="e#18725#18787#0" />
             <element signature="e#15905#16009#0" />
             <element signature="e#15937#15999#0" />
             <element signature="n#!!block;n#initBysykkelMarkers#1" />
+            <element signature="e#19120#19156#0" />
+            <element signature="e#26699#26806#0" />
             <element signature="n#!!block;n#findUserPosition#0" />
             <element signature="e#16529#17027#0" />
             <element signature="e#16594#17020#0" />
             <element signature="e#16618#16727#0" />
             <element signature="e#16798#16926#0" />
+            <element signature="e#20890#20921#0" />
             <element signature="n#!!block;n#initDirections#0" />
             <element signature="e#17194#17359#0" />
             <element signature="n#!!block;n#findDirectionsFromButton#0" />
@@ -847,11 +945,6 @@
             <element signature="e#17692#17907#0" />
             <element signature="e#17726#17800#0" />
             <element signature="e#17806#17897#0" />
-            <element signature="n#!!block;n#calculateAndDisplayRoute#0" />
-            <element signature="e#18101#18253#0" />
-            <element signature="e#18282#18473#0" />
-            <element signature="e#18312#18378#0" />
-            <element signature="e#18384#18467#0" />
             <element signature="n#!!block;n#infoLink#0" />
             <element signature="e#18587#18700#0" />
             <element signature="e#18631#18694#0" />
@@ -859,8 +952,28 @@
             <element signature="e#18853#18902#0" />
             <element signature="e#18924#18968#0" />
             <element signature="n#!!block;n#bysykkelLoadAvailability#0" />
+            <element signature="e#19217#19387#0" />
+            <element signature="e#19285#19371#0" />
+            <element signature="e#19409#19453#0" />
             <element signature="n#!!block;n#bysykkelStationsWithAvailability#0" />
+            <element signature="e#19540#19645#0" />
             <element signature="n#!!block;n#MapIconGenerator#0" />
+            <element signature="e#22452#22491#0" />
+            <element signature="e#22500#22543#0" />
+            <element signature="e#22609#22985#0" />
+            <element signature="e#22997#23141#0" />
+            <element signature="e#23052#23135#0" />
+            <element signature="n#!!block;n#filterBysykkelStationsOnDistance#0" />
+            <element signature="e#24180#24343#0" />
+            <element signature="e#24304#24337#0" />
+            <element signature="e#24357#24373#0" />
+            <element signature="e#25009#25025#0" />
+            <element signature="e#25038#25062#0" />
+            <element signature="e#25135#25213#0" />
+            <element signature="e#25164#25207#0" />
+            <element signature="e#24595#25022#0" />
+            <element signature="e#24654#25015#0" />
+            <element signature="e#23409#23441#0" />
           </folding>
         </state>
       </provider>
@@ -927,13 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googleapi/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/MapIconGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -941,10 +1047,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/googleapi/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="16">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
           </folding>
@@ -953,10 +1066,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="808" column="96" selection-start-line="808" selection-start-column="96" selection-end-line="808" selection-end-column="96" />
+        <state relative-caret-position="584">
+          <caret line="784" column="20" lean-forward="true" selection-start-line="784" selection-start-column="20" selection-end-line="784" selection-end-column="20" />
           <folding>
-            <element signature="e#33#3626#0" />
             <element signature="e#36#38#0" />
             <element signature="e#483#485#0" />
             <element signature="e#1385#1387#0" />
@@ -1083,6 +1195,14 @@
             <element signature="e#12551#12717#0" />
             <element signature="e#12569#12627#0" />
             <element signature="e#12645#12703#0" />
+            <element signature="e#12954#13046#0" />
+            <element signature="e#12974#13040#0" />
+            <element signature="e#13095#13189#0" />
+            <element signature="e#13115#13183#0" />
+            <element signature="e#13244#13337#0" />
+            <element signature="e#13264#13331#0" />
+            <element signature="e#13393#13486#0" />
+            <element signature="e#13413#13480#0" />
             <element signature="e#13061#13185#0" />
             <element signature="e#13107#13183#0" />
             <element signature="e#13295#13299#0" />
@@ -1099,20 +1219,32 @@
             <element signature="e#14707#14752#0" />
             <element signature="e#14852#14912#0" />
             <element signature="e#14975#15454#0" />
+            <element signature="e#15493#15523#0" />
             <element signature="e#13108#13204#0" />
+            <element signature="e#16334#16390#0" />
             <element signature="e#13746#13836#0" />
-            <element signature="n#!!block;n#initMap#0" />
+            <element signature="e#14090#14174#0" />
+            <element signature="e#14188#14212#0" />
+            <element signature="e#14315#14365#0" />
             <element signature="n#!!block;n#findCenter#0" />
             <element signature="e#14187#14268#0" />
-            <element signature="n#!!block;n#initMarkers#0" />
+            <element signature="e#14578#14686#0" />
+            <element signature="e#18256#18303#0" />
+            <element signature="e#15491#15610#0" />
+            <element signature="e#18438#18619#0" />
+            <element signature="e#18693#18797#0" />
+            <element signature="e#18725#18787#0" />
             <element signature="e#15905#16009#0" />
             <element signature="e#15937#15999#0" />
             <element signature="n#!!block;n#initBysykkelMarkers#1" />
+            <element signature="e#19120#19156#0" />
+            <element signature="e#26699#26806#0" />
             <element signature="n#!!block;n#findUserPosition#0" />
             <element signature="e#16529#17027#0" />
             <element signature="e#16594#17020#0" />
             <element signature="e#16618#16727#0" />
             <element signature="e#16798#16926#0" />
+            <element signature="e#20890#20921#0" />
             <element signature="n#!!block;n#initDirections#0" />
             <element signature="e#17194#17359#0" />
             <element signature="n#!!block;n#findDirectionsFromButton#0" />
@@ -1121,11 +1253,6 @@
             <element signature="e#17692#17907#0" />
             <element signature="e#17726#17800#0" />
             <element signature="e#17806#17897#0" />
-            <element signature="n#!!block;n#calculateAndDisplayRoute#0" />
-            <element signature="e#18101#18253#0" />
-            <element signature="e#18282#18473#0" />
-            <element signature="e#18312#18378#0" />
-            <element signature="e#18384#18467#0" />
             <element signature="n#!!block;n#infoLink#0" />
             <element signature="e#18587#18700#0" />
             <element signature="e#18631#18694#0" />
@@ -1133,8 +1260,28 @@
             <element signature="e#18853#18902#0" />
             <element signature="e#18924#18968#0" />
             <element signature="n#!!block;n#bysykkelLoadAvailability#0" />
+            <element signature="e#19217#19387#0" />
+            <element signature="e#19285#19371#0" />
+            <element signature="e#19409#19453#0" />
             <element signature="n#!!block;n#bysykkelStationsWithAvailability#0" />
+            <element signature="e#19540#19645#0" />
             <element signature="n#!!block;n#MapIconGenerator#0" />
+            <element signature="e#22452#22491#0" />
+            <element signature="e#22500#22543#0" />
+            <element signature="e#22609#22985#0" />
+            <element signature="e#22997#23141#0" />
+            <element signature="e#23052#23135#0" />
+            <element signature="n#!!block;n#filterBysykkelStationsOnDistance#0" />
+            <element signature="e#24180#24343#0" />
+            <element signature="e#24304#24337#0" />
+            <element signature="e#24357#24373#0" />
+            <element signature="e#25009#25025#0" />
+            <element signature="e#25038#25062#0" />
+            <element signature="e#25135#25213#0" />
+            <element signature="e#25164#25207#0" />
+            <element signature="e#24595#25022#0" />
+            <element signature="e#24654#25015#0" />
+            <element signature="e#23409#23441#0" />
           </folding>
         </state>
       </provider>
