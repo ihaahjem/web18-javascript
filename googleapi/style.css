@@ -81,6 +81,11 @@ input#kollektivt + label[for=kollektivt]{
     left:0;
 }
 
+input#matbutikk + label[for=matbutikk]{
+    top: 550px;
+    left:0;
+}
+
 input.chk-btn:not(.checked)+label:hover{
     box-shadow: 0 1px 3px;
     left:0;

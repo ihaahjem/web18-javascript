@@ -6,8 +6,8 @@ var markers = [
 //
 //Skole markører
 //
-    ['Campus Fjerdingen', 59.916224, 10.759697, 0, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Chr. Krohgs gate 32, 0186 Oslo', '08.00 – 24.00', '10.00 – 23.00'],
-    ['Campus Vulkan', 59.9233391, 10.7503081, 1, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Vulkan 19, 0178 Oslo', '08.00 – 22.00', '10.00-18.00'],
+    ['Campus Fjerdingen', 59.916224, 10.759697, 0, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/fjerdingen.jpg', 'Adresse: Chr. Krohgs gate 32, 0186 Oslo', '08.00 – 24.00', '10.00 – 23.00'],
+    ['Campus Vulkan', 59.9233391, 10.7503081, 1, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/vulkan.jpg', 'Adresse: Vulkan 19, 0178 Oslo', '08.00 – 22.00', '10.00-18.00'],
     ['Campus Brenneriveien', 59.920352, 10.7506041, 2, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Brenneriveien 9, 0182 Oslo', '07.30 – 24.00', '10.00 – 23.00'],
     ['Campus Kvadraturen', 59.911015, 10.7439543, 3, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Kirkegata 24-26, 0153 Oslo', '08.00 – 23.00', '09.00 – 17.00'],
 //
@@ -37,18 +37,29 @@ var markers = [
     ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/kulturhuset.jpg', 'Adresse: Youngs gate 6, 0181 Oslo', '08.00 - 03.30', '11.00 - 03.30'],
 //
 //Treningssentre
+//
+    ['Actic Storgata', 59.91618200000001, 10.757546, 23, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/actic.jpg', 'Adresse: Storgata 38, 0182 Oslo', '05.00 - 23.00', '08.00 - 23.00'],
+    ['Haralds Gym', 59.9157868, 10.7587026, 24, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/haralds-gym.jpg', 'Adresse: Hausmanns gate 6, 0186 Oslo', '06.00 - 12.00', '06.00 - 12.00'],
+    ['SATS Schous plass', 59.9188379, 10.7603446, 25, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/sats.jpg', 'Adresse: Trondheimsveien 2D, 0560 Oslo', '06.00 - 22.30', '08.30 - 19.00'],
+    ['EVO Grünerløkka', 59.9199906, 10.7598709, 26, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/evo.png', 'Adresse: Thorvald Meyers gate 72, 0552 Oslo', '05.00 - 12.00', '05.00 - 12.00'],
+    ['SATS Spektrum', 59.9128297, 10.7549285, 27, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/sats.jpg', 'Adresse: Sonja Henies plass 4, 0185 Oslo', '06.15 - 21.30', '10.00 - 17.00'],
+    ['SiO Athletica Vukan', 59.9231517, 10.7500041, 28, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/athletica.jpg', 'Adresse: Vulkan 15, 0178 Oslo', '06.00 - 22.00', '09.00 - 18.00'],
+    ['SiO Athletica Centrum', 59.9186627, 10.731186, 29, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/athletica.jpg', 'Adresse: Holbergs gate 21, 0166 Oslo', '07.00 - 22.00', '11.00 - 18.00'],
+    ['24Fitness AS', 59.91266, 10.743449, 30, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/24hourfitness.png', 'Adresse: Karl Johans gate 17, 0159 Oslo', '05.00 - 00.00', '05.00 - 00.00'],
+    ['SATS Akersgata', 59.914745, 10.7432694, 31, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/sats.jpg', 'Adresse: Akersgata 51, 0180 Oslo', '06.00 - 21.30', '10.00 - 19.00'],
+    ['Fresh Fitness St Hanshaugen', 59.925468, 10.7454316, 32, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/fresh.png', 'Waldemar Thranes gate 25, 0171 Oslo', '05.00 - 23.00', '05.00 - 23.00'],
+//
+//Matbutikk
+//
+    ['REMA 1000', 59.9140393, 10.7567231, 33, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Christian Krohgs gate 1-11, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
+    ['REMA 1000', 59.9137399, 10.7471823, 34, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Torggata 2, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
+    ['MENY Oslo City', 59.9126314, 10.752499, 35, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/meny.jpg', 'Adresse: Stenersgata 1, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
+    ['REMA 1000', 59.919193, 10.7470611, 36, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Fredensborgveien 24, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
+    ['REMA 1000', 59.9200256, 10.7386707, 37, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Pilestredet Park 31, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
+    ['Rema 1000 Vulkan', 59.92329949999999, 10.7512015, 38, 'matbutikk', 'supermarket.png', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Maridalsveien 15, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
+    ['Bunnpris Gunerius', 59.9138834, 10.7536016, 39, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/bunnpris.png', 'Adresse: Storgata 32, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)']
 
-    ['Actic Storgata', 59.91618200000001, 10.757546, 23, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Storgata 38, 0182 Oslo', '05.00 - 23.00', '08.00 - 23.00'],
-    ['Haralds Gym', 59.9157868, 10.7587026, 24, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Hausmanns gate 6, 0186 Oslo', '06.00 - 12.00', '06.00 - 12.00'],
-    ['SATS Schous plass', 59.9188379, 10.7603446, 25, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Trondheimsveien 2D, 0560 Oslo', '06.00 - 22.30', '08.30 - 19.00'],
-    ['EVO Grünerløkka', 59.9199906, 10.7598709, 26, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Thorvald Meyers gate 72, 0552 Oslo', '05.00 - 12.00', '05.00 - 12.00'],
-    ['SATS Spektrum', 59.9128297, 10.7549285, 27, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Sonja Henies plass 4, 0185 Oslo', '06.15 - 21.30', '10.00 - 17.00'],
-    ['SiO Athletica Vukan', 59.9231517, 10.7500041, 28, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Vulkan 15, 0178 Oslo', '06.00 - 22.00', '09.00 - 18.00'],
-    ['SiO Athletica Centrum', 59.9186627, 10.731186, 29, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Holbergs gate 21, 0166 Oslo', '07.00 - 22.00', '11.00 - 18.00'],
-    ['24Fitness AS', 59.91266, 10.743449, 30, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Karl Johans gate 17, 0159 Oslo', '05.00 - 00.00', '05.00 - 00.00'],
-    ['SATS Akersgata', 59.914745, 10.7432694, 31, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Akersgata 51, 0180 Oslo', '06.00 - 21.30', '10.00 - 19.00'],
-    ['Fresh Fitness St Hanshaugen', 59.925468, 10.7454316, 32, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Waldemar Thranes gate 25, 0171 Oslo', '05.00 - 23.00', '05.00 - 23.00']
-]
+];
 var kollektivtMarkers = [
     //kollektivt
     ['Heimdalsgata',    59.918500, 10.761413, 'holdeplass', ['fjerdingen'],             ['trikk', 'buss'], ['17'],                  ['30', '31', '31E', 'N390']],
@@ -659,13 +670,26 @@ function findCenter() {
 
 function initMarkers() {
     for(var i = 0; i < markers.length; i++){
+        var title;
+        if(i <= 3){
+            title = markers[i][0];
+        }
+        else{
+            title = " ";
+        }
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+            label: {
+                text: title,
+                color: 'black',
+                fontWeight:'bold',
+                fontSize: '16px'
+            },
             map: map,
             icon: icon = {
                 scaledSize: new google.maps.Size(30, 30),
                 url: markers[i][5]
-            },
+            }
         });
 
         marker.setVisible(false);
@@ -821,7 +845,7 @@ function findUserPosition() {
                     map: this.map,
                     title: "Her er du",
                     icon: userMarker = {
-                        scaledSize: new google.maps.Size(30, 30),
+                        scaledSize: new google.maps.Size(20, 20),
                         url: "blaa-dot.png"
                     }
                 }
