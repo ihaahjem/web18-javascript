@@ -428,6 +428,7 @@ var options = {
 var map;
 var infowindow = new google.maps.InfoWindow();
 var icon;
+var userMarker;
 var userPosition;
 
 
@@ -677,7 +678,11 @@ function findUserPosition() {
                 {
                     position: pos,
                     map: this.map,
-                    title: "Her er du"
+                    title: "Her er du",
+                    icon: userMarker = {
+                        scaledSize: new google.maps.Size(15, 15),
+                        url: "blaa-dot.png"
+                    }
                 }
             );
             this.map.setCenter(pos);
