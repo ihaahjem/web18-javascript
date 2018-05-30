@@ -6,53 +6,49 @@ var markers = [
 //
 //Skole markører
 //
-    ['Campus Fjerdingen', 59.916224, 10.759697, 0, 'school', 'sirkelmarker.png', 'http://facebook.com'],
-    ['Campus Vulkan', 59.9233391, 10.7503081, 1, 'school', 'sirkelmarker.png', 'http://facebook.com'],
-    ['Campus Brenneriveien', 59.920352, 10.7506041, 2, 'school', 'sirkelmarker.png', 'http://facebook.com'],
-    ['Campus Kvadraturen', 59.911015, 10.7439543, 3, 'school', 'sirkelmarker.png', 'http://facebook.com'],
+    ['Campus Fjerdingen', 59.916224, 10.759697, 0, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Chr. Krohgs gate 32, 0186 Oslo', '08.00 – 24.00', '10.00 – 23.00'],
+    ['Campus Vulkan', 59.9233391, 10.7503081, 1, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Vulkan 19, 0178 Oslo', '08.00 – 22.00', '10.00-18.00'],
+    ['Campus Brenneriveien', 59.920352, 10.7506041, 2, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Brenneriveien 9, 0182 Oslo', '07.30 – 24.00', '10.00 – 23.00'],
+    ['Campus Kvadraturen', 59.911015, 10.7439543, 3, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Kirkegata 24-26, 0153 Oslo', '08.00 – 23.00', '09.00 – 17.00'],
 //
 //Spisested markører
 //
-    ['Talor og Jørgen', 59.9149799, 10.7504415, 4, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Mathallen', 59.922217, 10.749852, 5, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Taco República', 59.9170294, 10.7509215, 6, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Freddy Fuego', 59.9178054, 10.7515039, 7, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Peloton', 59.9174132, 10.7522924, 8, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Munchies', 59.91638, 10.7490935, 9, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Haralds Vaffler', 59.913759, 10.745212, 10, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Würst', 59.9137012, 10.7465163, 11, 'food', 'food-marker.png', 'http://facebook.com'],
-    ['Bari Pizza', 59.9166197, 10.7527744, 12, 'food', 'food-marker.png', 'http://facebook.com'],
+    ['Talor og Jørgen', 59.9149799, 10.7504415, 4, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Youngs gate 9, 0181 Oslo', '07.30 - 17.00', '12.00 - 17.00'],
+    ['Mathallen', 59.922217, 10.749852, 5, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Vulkan 5, 0178 Oslo', '10.00 - 20.00 (stengt mandag)', '11.00 - 18.00'],
+    ['Taco República', 59.9170294, 10.7509215, 6, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/taco-republica.jpg', 'Adresse: Torggata 30, 0183 Oslo', '16.00 - 23.00 (stengt mandag)', '12.00 - 00.30'],
+    ['Freddy Fuego', 59.9178054, 10.7515039, 7, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Hausmanns gate 31a, 0182 Oslo', '11.00 - 21.00', '11.00 - 23.00'],
+    ['Peloton', 59.9174132, 10.7522924, 8, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/peloton.jpg', 'Adresse: Torggata 35, 0183 Oslo', '08.00 - 11.30', '11.00 - 03.30'],
+    ['Munchies', 59.91638, 10.7490935, 9, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/munchies.jpg', 'Adresse:  Torggata 18c, 0181 Oslo', '11.00 - 22.00', '11.00 - 03.00'],
+    ['Haralds Vaffler', 59.913759, 10.745212, 10, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/vafler.jpg', 'Adresse: Torggata 7, 0181 Oslo', '11.00 - 20.00', '11.00 - 20.00'],
+    ['Würst', 59.9137012, 10.7465163, 11, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/wurst.jpg', 'Adresse: Torggata 11, 0181 Oslo', '13.00 - 00.30', '13.00 - 03.00'],
+    ['Bari Pizza', 59.9166197, 10.7527744, 12, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/bari-pizza.jpg', 'Adresse: Torggata 23, 0183 Oslo', '12.00 - 00.00', '12.00 - 03.00'],
 //
 //Bar/utested markører
 //
-    ['Cafe Sara', 59.9176068, 10.754149, 13, 'bar', 'bar-marker.png', 'http://facebook.com'],
-    ['Verkstedet', 59.9177192, 10.7517947, 14, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Cafe Sør', 59.9141846, 10.7461596, 15, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Crow bar', 59.9171999, 10.7512208, 16, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Tilt', 59.9162015, 10.7485173, 17, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Angst', 59.9139828, 10.7465088, 18, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Peretroska', 59.9135765, 10.7470165, 19, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Kniven', 59.9163927, 10.7490339, 20, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Oslo Bar & Bowling', 59.9158823, 10.7485441, 21, 'bar', 'bar-marker.png', 'http://dogs.com'],
-    ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png', 'http://dogs.com'],
+    ['Cafe Sara', 59.9176068, 10.754149, 13, 'bar', 'bar-marker.png', 'http://facebook.com', 'infovindu-bilder/cafe-sara.jpg', 'Adresse: Hausmanns gate 29, 0182 Oslo', '11.00 - 03.30', '11.00 - 03.30'],
+    ['Verkstedet', 59.9177192, 10.7517947, 14, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/verkstedet.jpg', 'Adresse:  Hausmanns gate 29, 0182 Oslo', '19.00 - 03.00 (stengt man, tirs, ons)', '19.00 - 03.00'],
+    ['Cafe Sør', 59.9141846, 10.7461596, 15, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/cafe-&-sor.jpg', 'Adresse: Torggata 11, 0181 Oslo', '11:00 — 00:30', '11:00—  03:30'],
+    ['Crow bar', 59.9171999, 10.7512208, 16, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/crow.jpg', 'Adresse: Torggata 32, 0183 Oslo', '15.00 - 03.00', '15.00 - 03.00'],
+    ['Tilt', 59.9162015, 10.7485173, 17, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/tilt.jpg', 'Adresse:  Badstugata 6, 0183 Oslo', '15.00 - 03.30', '15.00 - 03.30'],
+    ['Angst', 59.9139828, 10.7465088, 18, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/angst.jpg', 'Adresse: Torggata 11, 0181 Oslo', '12.00 - 01.30', '12.00 - 03.00'],
+    ['Peretroska', 59.9135765, 10.7470165, 19, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/peretroika.jpg', 'Adresse: Storgata 13, 0155 Oslo', '16.00 - 03.30', '16.00 - 03.30'],
+    ['Kniven', 59.9163927, 10.7490339, 20, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/kniven.jpg', 'Adresse:  Bernt Ankers gate 5, 0183 Oslo', '14.00 - 03.30', '18.00 - 03.30'],
+    ['Oslo Bar & Bowling', 59.9158823, 10.7485441, 21, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/bar-&-bowling.jpg', 'Adresse: Torggata 16, 0181 Oslo', '11.00 - 00.00', '11.00 - 02.00'],
+    ['Kulturhuset', 59.9146546, 10.7486177, 22, 'bar', 'bar-marker.png', 'http://dogs.com', 'infovindu-bilder/kulturhuset.jpg', 'Adresse: Youngs gate 6, 0181 Oslo', '08.00 - 03.30', '11.00 - 03.30'],
 //
 //Treningssentre
-//
-    ['Actic Storgata', 59.91618200000001, 10.757546, 23, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['Haralds Gym', 59.9157868, 10.7587026, 24, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['SATS Schous plass', 59.9188379, 10.7603446, 25, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['EVO Grünerløkka', 59.9199906, 10.7598709, 26, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['SATS Spektrum', 59.9128297, 10.7549285, 27, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['Gymmen', 59.9170116, 10.7587169, 28, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['Lofoten Performance', 59.91722379999998, 10.7561713, 29, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['SiO Athletica Vukan', 59.9231517, 10.7500041, 30, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['SiO Athletica Centrum', 59.9186627, 10.731186, 31, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['24Fitness AS', 59.91266, 10.743449, 32, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['Fitness24Seven', 59.9138303, 10.7455569, 33, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['SATS Akersgata', 59.914745, 10.7432694, 34, 'gym', 'gym-marker.png', 'http://dogs.com'],
-    ['Fresh Fitness St Hanshaugen', 59.925468, 10.7454316, 35, 'gym', 'gym-marker.png', 'http://dogs.com']
-];
 
+    ['Actic Storgata', 59.91618200000001, 10.757546, 23, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Storgata 38, 0182 Oslo', '05.00 - 23.00', '08.00 - 23.00'],
+    ['Haralds Gym', 59.9157868, 10.7587026, 24, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Hausmanns gate 6, 0186 Oslo', '06.00 - 12.00', '06.00 - 12.00'],
+    ['SATS Schous plass', 59.9188379, 10.7603446, 25, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Trondheimsveien 2D, 0560 Oslo', '06.00 - 22.30', '08.30 - 19.00'],
+    ['EVO Grünerløkka', 59.9199906, 10.7598709, 26, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Thorvald Meyers gate 72, 0552 Oslo', '05.00 - 12.00', '05.00 - 12.00'],
+    ['SATS Spektrum', 59.9128297, 10.7549285, 27, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Sonja Henies plass 4, 0185 Oslo', '06.15 - 21.30', '10.00 - 17.00'],
+    ['SiO Athletica Vukan', 59.9231517, 10.7500041, 28, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Vulkan 15, 0178 Oslo', '06.00 - 22.00', '09.00 - 18.00'],
+    ['SiO Athletica Centrum', 59.9186627, 10.731186, 29, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Holbergs gate 21, 0166 Oslo', '07.00 - 22.00', '11.00 - 18.00'],
+    ['24Fitness AS', 59.91266, 10.743449, 30, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Karl Johans gate 17, 0159 Oslo', '05.00 - 00.00', '05.00 - 00.00'],
+    ['SATS Akersgata', 59.914745, 10.7432694, 31, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Akersgata 51, 0180 Oslo', '06.00 - 21.30', '10.00 - 19.00'],
+    ['Fresh Fitness St Hanshaugen', 59.925468, 10.7454316, 32, 'gym', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/t&j.jpg', 'Waldemar Thranes gate 25, 0171 Oslo', '05.00 - 23.00', '05.00 - 23.00']
+]
 var kollektivtMarkers = [
     //kollektivt
     ['Heimdalsgata',    59.918500, 10.761413, 'holdeplass', ['fjerdingen'],             ['trikk', 'buss'], ['17'],                  ['30', '31', '31E', 'N390']],
@@ -475,6 +471,7 @@ var brenneriveienMarker = new google.maps.Marker({
 var map;
 var icon;
 var infowindow = new google.maps.InfoWindow();
+
 var userPosition;
 var userMarker;
 
@@ -679,12 +676,19 @@ function initMarkers() {
 
         google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
 
-        var infoWindowContent = ('<p>Event Name: "+markers[i][0]"</p>' +
-            '<button id="bike-btn" onclick="findDirectionsFromButton('+ i +', travelModes.bike)">Sykle</button>' +
-            '<button id="walk-btn" onclick="findDirectionsFromButton('+ i +', travelModes.walk)">Gå</button>' +
-            '<button id="drive-btn" onclick="findDirectionsFromButton('+ i +', travelModes.drive)">Miljøsvin</button>' +
-            '<button id="transit-btn" onclick="findDirectionsFromButton('+ i +', travelModes.transit)">Offentlig transport</button>' +
-            '<button id="info-btn" onclick="infoLink(' + i + ')">More info</button>');
+        var infoWindowContent = (
+            '<div    id="window">' +
+            '<img    id="infoImg" src='+markers[i][7]+'>' +
+            '<p      id="stedsNavn" class="windowTekst"> '+markers[i][0]+'</p>' +
+            '<p      id="adresse" class="windowTekst"> '+markers[i][8]+'</p>' +
+            '<p      id="apninstidUke" class="windowTekst">'+markers[i][9]+'</p>' +
+            '<p      id="apninstidHelg" class="windowTekst">'+markers[i][10]+'</p>' +
+            '<button id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.bike)">Sy</button>' +
+            '<button id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.walk)">Gå</button>' +
+            '<button id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.drive)">Mi</button>' +
+            '<button id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.transit)">Of</button>' +
+            '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">Mo</button>' +
+            '</div>');
 
             return function() {
                 infowindow.setContent(infoWindowContent);
@@ -815,7 +819,11 @@ function findUserPosition() {
                 {
                     position: pos,
                     map: this.map,
-                    title: "Her er du"
+                    title: "Her er du",
+                    icon: userMarker = {
+                        scaledSize: new google.maps.Size(15, 15),
+                        url: "blaa-dot.png"
+                    }
                 }
             );
             this.map.setCenter(center);
@@ -966,4 +974,6 @@ function filterBysykkelStationsOnDistance() {
 
 
 }
+
+
 
