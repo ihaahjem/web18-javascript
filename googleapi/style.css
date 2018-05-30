@@ -120,41 +120,73 @@ input.info-btn+label[for=moreInfo]:active, input.info-btn:checked+label[for=more
     background: #870401;
 }
 
-#windowBtns{
-    position:relative;
-    height:200px;
-    width:200px;
-    background-color: #4CAF50;
-    display:block;
+#window{
+    position: relative;
+    height:300px;
+    width:300px;
 
+}
+
+#infoImg{
+    position:absolute;
+    padding:5px;
+    width:280px;
+    height:200px;
+    top:0;
 }
 
 .windowBtnClass{
-    position:relative;
-    width:30px;
-    height:10px;
-    top:160px;
+    position:absolute;
+    display: block;
+    margin: 6px 10px !important;
+    padding: 5px;
+    width: auto;
+    height:20px;
+    bottom:20px;
+    background-color:red;
+
 }
 
 #bike-btn{
-    left:0px;
+    left:0;
 }
 
 #walk-btn{
-    left:30px;
-}
-
-#drive-btn{
     left:60px;
 }
 
-#transit-btn{
+#drive-btn{
     left:90px;
 }
 
-#info-btn{
+#transit-btn{
     left:120px;
 }
 
+#info-btn{
+    left:180px;
+}
 
+.windowTekst{
+    position:absolute;
+    padding: 5px;
+    z-index:100;
+}
+
+
+#stedsNavn{
+    bottom:50px;
+}
+
+#adresse{
+    bottom:40px;
+}
+
+#apninstidUke{
+    bottom:30px;
+}
+
+#apninstidHelg{
+    bottom:20px;
+}
 
