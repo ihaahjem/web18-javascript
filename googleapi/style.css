@@ -112,7 +112,7 @@
 input.chk-btn{
     width:20px;
     height:10px;
-    display: none;
+    display: none ;
 }
 
 input.chk-btn + label{
@@ -141,7 +141,7 @@ input.chk-btn + label{
     border:1px solid black;
     vertical-align: top;
 }
-
+/*
 #clearRoute {
     margin: auto;
     position: fixed;
@@ -154,7 +154,7 @@ input.chk-btn + label{
     border:1px solid black;
     vertical-align: top;
 }
-
+*/
 button#clearRoute {
     top:150px;
     left:0;

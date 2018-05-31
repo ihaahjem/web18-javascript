@@ -606,6 +606,7 @@ $(".chk-btn").on('change', filterMarkers);
 $(".chk-btn").on('change', clearRoute);
 
 
+
 //Init kart og starter div funksjoner
 function initMap() {
     findUserPosition();
@@ -613,6 +614,7 @@ function initMap() {
     initMarkers();
     initKollektivMarkers();
     initDirections();
+    $('label[for=clearRoute], input#clearRoute').hide();
     Promise.all([
         bysykkelImportStations(),
         bysykkelLoadAvailability()
@@ -747,6 +749,11 @@ function initKollektivMarkers() {
                 lng: kollektivtMarkers[j][2]
             },
             map: this.map,
+            icon: icon = {
+                scaledSize: new google.maps.Size(30, 30),
+                url: "infovindu-bilder/kollektivt.png",
+                labelOrigin: new google.maps.Point(15, 40)
+            }
         })
 
         marker.setVisible(false);
@@ -864,7 +871,6 @@ function filterMarkers(category)    {
             s.setVisible(false);
         })
     }
-
 }
 
 function clearFilters() {
@@ -877,8 +883,8 @@ function clearFilters() {
 }
 
 function clearRoute() {
+    $('label[for=clearRoute], input#clearRoute').hide();
     directionsDisplay.set('directions', null);
-
 }
 
 function findUserPosition() {
@@ -939,6 +945,7 @@ function findDirectionsFromButton(i, travelMode) {
             }
         });
     infowindow.close();
+    $('label[for=clearRoute], input#clearRoute').show();
 }
 
 function findDirectionsFromButtonKollektiv(i, travelMode) {
@@ -960,6 +967,7 @@ function findDirectionsFromButtonKollektiv(i, travelMode) {
             }
         });
     infowindow.close();
+    $('label[for=clearRoute], input#clearRoute').show();
 }
 
 function infoLink(markerNumber) {
