@@ -4,46 +4,6 @@
     <list default="true" id="e36d2451-ca32-4545-b31d-cf28faa3dc3a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmaps.zip" beforeDir="false" afterPath="$PROJECT_DIR$/gmaps.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/24hourfitness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/actic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/angst.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/athletica.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/bar-&amp;-bowling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/bari-pizza.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/bil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/brenneriveien.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/bunnpris.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/cafe-&amp;-sor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/cafe-sara.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/crow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/evo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/fjerdingen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/foodexpress.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/freddyfuego.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/fresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/haralds-gym.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/hk.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/kniven.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/kollektivt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/kulturhuset.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/mathallen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/meny.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/munchies.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/peloton.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/peretroika.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/rema.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/sats.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/sykkel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/t&amp;j.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/taco-republica.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/tilt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/vafler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/verkstedet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/vulkan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/walk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/infovindu-bilder/wurst.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleapi/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleapi/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="585">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
               </folding>
@@ -72,8 +32,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/googleapi/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="820" lean-forward="true" selection-start-line="820" selection-end-line="820" />
+            <state relative-caret-position="330">
+              <caret line="772" column="43" lean-forward="true" selection-start-line="772" selection-start-column="43" selection-end-line="772" selection-end-column="76" />
               <folding>
                 <element signature="e#67#8648#0" />
                 <element signature="e#36#38#0" />
@@ -236,9 +196,14 @@
                 <element signature="e#24534#24584#0" />
                 <element signature="e#24704#24887#0" />
                 <element signature="e#24738#24819#0" />
+                <element signature="e#24912#27617#0" />
+                <element signature="e#24959#27615#0" />
+                <element signature="e#25006#25449#0" />
                 <element signature="e#25103#25222#0" />
                 <element signature="e#25271#25439#0" />
                 <element signature="e#25507#25554#0" />
+                <element signature="e#25637#27168#0" />
+                <element signature="e#27644#27763#0" />
                 <element signature="e#28337#28442#0" />
                 <element signature="e#28370#28432#0" />
                 <element signature="e#28539#28644#0" />
@@ -249,13 +214,16 @@
                 <element signature="e#28942#29185#0" />
                 <element signature="e#28970#29077#0" />
                 <element signature="e#29240#29280#0" />
-                <element signature="e#31587#31779#0" />
+                <element signature="e#29359#31475#0" />
                 <element signature="e#31615#31733#0" />
-                <element signature="e#32385#32934#0" />
                 <element signature="e#32998#33542#0" />
+                <element signature="e#33136#33524#0" />
                 <element signature="e#33199#33424#0" />
                 <element signature="e#33294#33402#0" />
                 <element signature="e#33608#34157#0" />
+                <element signature="e#33749#34139#0" />
+                <element signature="e#33812#34038#0" />
+                <element signature="e#33907#34016#0" />
                 <element signature="e#34550#34681#0" />
                 <element signature="e#32985#33966#0" />
                 <element signature="e#33052#33086#0" />
@@ -280,9 +248,18 @@
                 <element signature="e#36025#36174#0" />
                 <element signature="e#36329#36384#0" />
                 <element signature="e#35175#35213#0" />
+                <element signature="e#36813#37450#0" />
+                <element signature="e#36846#37083#0" />
+                <element signature="e#36907#36993#0" />
                 <element signature="e#37175#37414#0" />
                 <element signature="e#37213#37295#0" />
                 <element signature="e#37301#37400#0" />
+                <element signature="e#36983#37545#0" />
+                <element signature="e#37012#37218#0" />
+                <element signature="e#37065#37139#0" />
+                <element signature="e#37302#37517#0" />
+                <element signature="e#37336#37410#0" />
+                <element signature="e#37416#37507#0" />
                 <element signature="e#37488#37740#0" />
                 <element signature="e#37575#37706#0" />
                 <element signature="e#37625#37696#0" />
@@ -346,6 +323,7 @@
       <find>infowindowcontent</find>
       <find>center</find>
       <find>grap</find>
+      <find>find</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -443,12 +421,12 @@
       <updated>1527163115054</updated>
       <workItem from="1527163116260" duration="897000" />
       <workItem from="1527238036045" duration="10101000" />
-      <workItem from="1527605095625" duration="62674000" />
+      <workItem from="1527605095625" duration="63715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121316000" />
+    <option name="totallyTimeSpent" value="122357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="-3" width="1551" height="903" extended-state="6" />
@@ -481,7 +459,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/googleapi/script.js</url>
+          <line>742</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -730,9 +716,14 @@
             <element signature="e#24534#24584#0" />
             <element signature="e#24704#24887#0" />
             <element signature="e#24738#24819#0" />
+            <element signature="e#24912#27617#0" />
+            <element signature="e#24959#27615#0" />
+            <element signature="e#25006#25449#0" />
             <element signature="e#25103#25222#0" />
             <element signature="e#25271#25439#0" />
             <element signature="e#25507#25554#0" />
+            <element signature="e#25637#27168#0" />
+            <element signature="e#27644#27763#0" />
             <element signature="e#28337#28442#0" />
             <element signature="e#28370#28432#0" />
             <element signature="e#28539#28644#0" />
@@ -743,13 +734,16 @@
             <element signature="e#28942#29185#0" />
             <element signature="e#28970#29077#0" />
             <element signature="e#29240#29280#0" />
-            <element signature="e#31587#31779#0" />
+            <element signature="e#29359#31475#0" />
             <element signature="e#31615#31733#0" />
-            <element signature="e#32385#32934#0" />
             <element signature="e#32998#33542#0" />
+            <element signature="e#33136#33524#0" />
             <element signature="e#33199#33424#0" />
             <element signature="e#33294#33402#0" />
             <element signature="e#33608#34157#0" />
+            <element signature="e#33749#34139#0" />
+            <element signature="e#33812#34038#0" />
+            <element signature="e#33907#34016#0" />
             <element signature="e#34550#34681#0" />
             <element signature="e#32985#33966#0" />
             <element signature="e#33052#33086#0" />
@@ -774,9 +768,18 @@
             <element signature="e#36025#36174#0" />
             <element signature="e#36329#36384#0" />
             <element signature="e#35175#35213#0" />
+            <element signature="e#36813#37450#0" />
+            <element signature="e#36846#37083#0" />
+            <element signature="e#36907#36993#0" />
             <element signature="e#37175#37414#0" />
             <element signature="e#37213#37295#0" />
             <element signature="e#37301#37400#0" />
+            <element signature="e#36983#37545#0" />
+            <element signature="e#37012#37218#0" />
+            <element signature="e#37065#37139#0" />
+            <element signature="e#37302#37517#0" />
+            <element signature="e#37336#37410#0" />
+            <element signature="e#37416#37507#0" />
             <element signature="e#37488#37740#0" />
             <element signature="e#37575#37706#0" />
             <element signature="e#37625#37696#0" />
@@ -1015,9 +1018,14 @@
             <element signature="e#24534#24584#0" />
             <element signature="e#24704#24887#0" />
             <element signature="e#24738#24819#0" />
+            <element signature="e#24912#27617#0" />
+            <element signature="e#24959#27615#0" />
+            <element signature="e#25006#25449#0" />
             <element signature="e#25103#25222#0" />
             <element signature="e#25271#25439#0" />
             <element signature="e#25507#25554#0" />
+            <element signature="e#25637#27168#0" />
+            <element signature="e#27644#27763#0" />
             <element signature="e#28337#28442#0" />
             <element signature="e#28370#28432#0" />
             <element signature="e#28539#28644#0" />
@@ -1028,13 +1036,16 @@
             <element signature="e#28942#29185#0" />
             <element signature="e#28970#29077#0" />
             <element signature="e#29240#29280#0" />
-            <element signature="e#31587#31779#0" />
+            <element signature="e#29359#31475#0" />
             <element signature="e#31615#31733#0" />
-            <element signature="e#32385#32934#0" />
             <element signature="e#32998#33542#0" />
+            <element signature="e#33136#33524#0" />
             <element signature="e#33199#33424#0" />
             <element signature="e#33294#33402#0" />
             <element signature="e#33608#34157#0" />
+            <element signature="e#33749#34139#0" />
+            <element signature="e#33812#34038#0" />
+            <element signature="e#33907#34016#0" />
             <element signature="e#34550#34681#0" />
             <element signature="e#32985#33966#0" />
             <element signature="e#33052#33086#0" />
@@ -1059,9 +1070,18 @@
             <element signature="e#36025#36174#0" />
             <element signature="e#36329#36384#0" />
             <element signature="e#35175#35213#0" />
+            <element signature="e#36813#37450#0" />
+            <element signature="e#36846#37083#0" />
+            <element signature="e#36907#36993#0" />
             <element signature="e#37175#37414#0" />
             <element signature="e#37213#37295#0" />
             <element signature="e#37301#37400#0" />
+            <element signature="e#36983#37545#0" />
+            <element signature="e#37012#37218#0" />
+            <element signature="e#37065#37139#0" />
+            <element signature="e#37302#37517#0" />
+            <element signature="e#37336#37410#0" />
+            <element signature="e#37416#37507#0" />
             <element signature="e#37488#37740#0" />
             <element signature="e#37575#37706#0" />
             <element signature="e#37625#37696#0" />
@@ -1173,16 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googleapi/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1190,10 +1200,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/googleapi/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="820" lean-forward="true" selection-start-line="820" selection-end-line="820" />
+        <state relative-caret-position="330">
+          <caret line="772" column="43" lean-forward="true" selection-start-line="772" selection-start-column="43" selection-end-line="772" selection-end-column="76" />
           <folding>
             <element signature="e#67#8648#0" />
             <element signature="e#36#38#0" />
@@ -1356,9 +1376,14 @@
             <element signature="e#24534#24584#0" />
             <element signature="e#24704#24887#0" />
             <element signature="e#24738#24819#0" />
+            <element signature="e#24912#27617#0" />
+            <element signature="e#24959#27615#0" />
+            <element signature="e#25006#25449#0" />
             <element signature="e#25103#25222#0" />
             <element signature="e#25271#25439#0" />
             <element signature="e#25507#25554#0" />
+            <element signature="e#25637#27168#0" />
+            <element signature="e#27644#27763#0" />
             <element signature="e#28337#28442#0" />
             <element signature="e#28370#28432#0" />
             <element signature="e#28539#28644#0" />
@@ -1369,13 +1394,16 @@
             <element signature="e#28942#29185#0" />
             <element signature="e#28970#29077#0" />
             <element signature="e#29240#29280#0" />
-            <element signature="e#31587#31779#0" />
+            <element signature="e#29359#31475#0" />
             <element signature="e#31615#31733#0" />
-            <element signature="e#32385#32934#0" />
             <element signature="e#32998#33542#0" />
+            <element signature="e#33136#33524#0" />
             <element signature="e#33199#33424#0" />
             <element signature="e#33294#33402#0" />
             <element signature="e#33608#34157#0" />
+            <element signature="e#33749#34139#0" />
+            <element signature="e#33812#34038#0" />
+            <element signature="e#33907#34016#0" />
             <element signature="e#34550#34681#0" />
             <element signature="e#32985#33966#0" />
             <element signature="e#33052#33086#0" />
@@ -1400,9 +1428,18 @@
             <element signature="e#36025#36174#0" />
             <element signature="e#36329#36384#0" />
             <element signature="e#35175#35213#0" />
+            <element signature="e#36813#37450#0" />
+            <element signature="e#36846#37083#0" />
+            <element signature="e#36907#36993#0" />
             <element signature="e#37175#37414#0" />
             <element signature="e#37213#37295#0" />
             <element signature="e#37301#37400#0" />
+            <element signature="e#36983#37545#0" />
+            <element signature="e#37012#37218#0" />
+            <element signature="e#37065#37139#0" />
+            <element signature="e#37302#37517#0" />
+            <element signature="e#37336#37410#0" />
+            <element signature="e#37416#37507#0" />
             <element signature="e#37488#37740#0" />
             <element signature="e#37575#37706#0" />
             <element signature="e#37625#37696#0" />
