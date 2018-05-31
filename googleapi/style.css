@@ -51,7 +51,7 @@ input.chk-btn + label{
 
 }
 
-#clear {
+#clearFilter {
     margin: auto;
     position: fixed;
     z-index:100;
@@ -62,6 +62,29 @@ input.chk-btn + label{
     padding:10px;
     border:1px solid black;
     vertical-align: top;
+}
+
+#clearRoute {
+    margin: auto;
+    position: fixed;
+    z-index:100;
+    background: red;
+    cursor: pointer;
+    width:80px;
+    height:10px;
+    padding:10px;
+    border:1px solid black;
+    vertical-align: top;
+}
+
+button#clearRoute {
+    top:150px;
+    left:0;
+}
+
+button#clearFilter {
+    top:200px;
+    left:0;
 }
 
 input#school + label[for=school]{
