@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e36d2451-ca32-4545-b31d-cf28faa3dc3a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/googleapi/supermarkets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/googleapi/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/googleapi/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/googleapi/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="139">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
               </folding>
@@ -28,20 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supermarkets.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/googleapi/supermarkets.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="767" column="21" lean-forward="true" selection-start-line="767" selection-start-column="21" selection-end-line="767" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleapi/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="475" column="15" selection-start-line="475" selection-start-column="15" selection-end-line="475" selection-end-column="15" />
+            <state relative-caret-position="372">
+              <caret line="703" lean-forward="true" selection-start-line="703" selection-end-line="703" />
               <folding>
                 <element signature="e#53#6781#0" />
                 <element signature="e#36#38#0" />
@@ -216,14 +208,11 @@
                 <element signature="e#24848#24898#0" />
                 <element signature="e#24940#25123#0" />
                 <element signature="e#24974#25055#0" />
-                <element signature="e#25148#27630#0" />
-                <element signature="e#25193#27628#0" />
                 <element signature="e#25239#25483#0" />
                 <element signature="e#25364#25472#0" />
                 <element signature="e#25539#25586#0" />
                 <element signature="e#25667#26971#0" />
                 <element signature="e#26842#26961#0" />
-                <element signature="e#27022#27203#0" />
                 <element signature="e#27276#27380#0" />
                 <element signature="e#27308#27370#0" />
                 <element signature="e#27475#27579#0" />
@@ -234,17 +223,25 @@
                 <element signature="e#27848#28063#0" />
                 <element signature="e#27872#27967#0" />
                 <element signature="e#28105#28141#0" />
-                <element signature="e#28178#31809#0" />
+                <element signature="e#26745#31494#0" />
                 <element signature="e#28208#30260#0" />
-                <element signature="e#30318#31807#0" />
+                <element signature="e#28885#31492#0" />
                 <element signature="e#30364#30532#0" />
                 <element signature="e#30388#30494#0" />
-                <element signature="e#30682#31787#0" />
-                <element signature="e#30961#31241#0" />
-                <element signature="e#31109#31193#0" />
-                <element signature="e#31299#31389#0" />
-                <element signature="e#31448#31541#0" />
-                <element signature="e#31658#31777#0" />
+                <element signature="e#29249#31471#0" />
+                <element signature="e#29660#30111#0" />
+                <element signature="e#29793#30097#0" />
+                <element signature="e#29852#30029#0" />
+                <element signature="e#29898#30007#0" />
+                <element signature="e#30170#30612#0" />
+                <element signature="e#30296#30598#0" />
+                <element signature="e#30355#30531#0" />
+                <element signature="e#30401#30509#0" />
+                <element signature="e#30673#31121#0" />
+                <element signature="e#30803#31107#0" />
+                <element signature="e#30862#31039#0" />
+                <element signature="e#30908#31017#0" />
+                <element signature="e#31342#31461#0" />
                 <element signature="e#31839#32655#0" />
                 <element signature="e#31872#32653#0" />
                 <element signature="e#31937#32646#0" />
@@ -334,9 +331,9 @@
         <option value="$PROJECT_DIR$/googleapi/kvadraturen.json" />
         <option value="$PROJECT_DIR$/googleapi/MapIconGenerator.js" />
         <option value="$PROJECT_DIR$/googleapi/style.css" />
+        <option value="$PROJECT_DIR$/googleapi/supermarkets.js" />
         <option value="$PROJECT_DIR$/googleapi/index.html" />
         <option value="$PROJECT_DIR$/googleapi/script.js" />
-        <option value="$PROJECT_DIR$/googleapi/supermarkets.js" />
       </list>
     </option>
   </component>
@@ -417,12 +414,12 @@
       <updated>1527163115054</updated>
       <workItem from="1527163116260" duration="897000" />
       <workItem from="1527238036045" duration="10101000" />
-      <workItem from="1527605095625" duration="33790000" />
+      <workItem from="1527605095625" duration="39382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92432000" />
+    <option name="totallyTimeSpent" value="98024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="-3" width="1551" height="903" extended-state="6" />
@@ -455,7 +452,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -716,14 +713,11 @@
             <element signature="e#24848#24898#0" />
             <element signature="e#24940#25123#0" />
             <element signature="e#24974#25055#0" />
-            <element signature="e#25148#27630#0" />
-            <element signature="e#25193#27628#0" />
             <element signature="e#25239#25483#0" />
             <element signature="e#25364#25472#0" />
             <element signature="e#25539#25586#0" />
             <element signature="e#25667#26971#0" />
             <element signature="e#26842#26961#0" />
-            <element signature="e#27022#27203#0" />
             <element signature="e#27276#27380#0" />
             <element signature="e#27308#27370#0" />
             <element signature="e#27475#27579#0" />
@@ -734,17 +728,25 @@
             <element signature="e#27848#28063#0" />
             <element signature="e#27872#27967#0" />
             <element signature="e#28105#28141#0" />
-            <element signature="e#28178#31809#0" />
+            <element signature="e#26745#31494#0" />
             <element signature="e#28208#30260#0" />
-            <element signature="e#30318#31807#0" />
+            <element signature="e#28885#31492#0" />
             <element signature="e#30364#30532#0" />
             <element signature="e#30388#30494#0" />
-            <element signature="e#30682#31787#0" />
-            <element signature="e#30961#31241#0" />
-            <element signature="e#31109#31193#0" />
-            <element signature="e#31299#31389#0" />
-            <element signature="e#31448#31541#0" />
-            <element signature="e#31658#31777#0" />
+            <element signature="e#29249#31471#0" />
+            <element signature="e#29660#30111#0" />
+            <element signature="e#29793#30097#0" />
+            <element signature="e#29852#30029#0" />
+            <element signature="e#29898#30007#0" />
+            <element signature="e#30170#30612#0" />
+            <element signature="e#30296#30598#0" />
+            <element signature="e#30355#30531#0" />
+            <element signature="e#30401#30509#0" />
+            <element signature="e#30673#31121#0" />
+            <element signature="e#30803#31107#0" />
+            <element signature="e#30862#31039#0" />
+            <element signature="e#30908#31017#0" />
+            <element signature="e#31342#31461#0" />
             <element signature="e#31839#32655#0" />
             <element signature="e#31872#32653#0" />
             <element signature="e#31937#32646#0" />
@@ -1008,14 +1010,11 @@
             <element signature="e#24848#24898#0" />
             <element signature="e#24940#25123#0" />
             <element signature="e#24974#25055#0" />
-            <element signature="e#25148#27630#0" />
-            <element signature="e#25193#27628#0" />
             <element signature="e#25239#25483#0" />
             <element signature="e#25364#25472#0" />
             <element signature="e#25539#25586#0" />
             <element signature="e#25667#26971#0" />
             <element signature="e#26842#26961#0" />
-            <element signature="e#27022#27203#0" />
             <element signature="e#27276#27380#0" />
             <element signature="e#27308#27370#0" />
             <element signature="e#27475#27579#0" />
@@ -1026,17 +1025,25 @@
             <element signature="e#27848#28063#0" />
             <element signature="e#27872#27967#0" />
             <element signature="e#28105#28141#0" />
-            <element signature="e#28178#31809#0" />
+            <element signature="e#26745#31494#0" />
             <element signature="e#28208#30260#0" />
-            <element signature="e#30318#31807#0" />
+            <element signature="e#28885#31492#0" />
             <element signature="e#30364#30532#0" />
             <element signature="e#30388#30494#0" />
-            <element signature="e#30682#31787#0" />
-            <element signature="e#30961#31241#0" />
-            <element signature="e#31109#31193#0" />
-            <element signature="e#31299#31389#0" />
-            <element signature="e#31448#31541#0" />
-            <element signature="e#31658#31777#0" />
+            <element signature="e#29249#31471#0" />
+            <element signature="e#29660#30111#0" />
+            <element signature="e#29793#30097#0" />
+            <element signature="e#29852#30029#0" />
+            <element signature="e#29898#30007#0" />
+            <element signature="e#30170#30612#0" />
+            <element signature="e#30296#30598#0" />
+            <element signature="e#30355#30531#0" />
+            <element signature="e#30401#30509#0" />
+            <element signature="e#30673#31121#0" />
+            <element signature="e#30803#31107#0" />
+            <element signature="e#30862#31039#0" />
+            <element signature="e#30908#31017#0" />
+            <element signature="e#31342#31461#0" />
             <element signature="e#31839#32655#0" />
             <element signature="e#31872#32653#0" />
             <element signature="e#31937#32646#0" />
@@ -1161,10 +1168,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/googleapi/supermarkets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="767" column="21" lean-forward="true" selection-start-line="767" selection-start-column="21" selection-end-line="767" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="475" column="15" selection-start-line="475" selection-start-column="15" selection-end-line="475" selection-end-column="15" />
+        <state relative-caret-position="372">
+          <caret line="703" lean-forward="true" selection-start-line="703" selection-end-line="703" />
           <folding>
             <element signature="e#53#6781#0" />
             <element signature="e#36#38#0" />
@@ -1339,14 +1353,11 @@
             <element signature="e#24848#24898#0" />
             <element signature="e#24940#25123#0" />
             <element signature="e#24974#25055#0" />
-            <element signature="e#25148#27630#0" />
-            <element signature="e#25193#27628#0" />
             <element signature="e#25239#25483#0" />
             <element signature="e#25364#25472#0" />
             <element signature="e#25539#25586#0" />
             <element signature="e#25667#26971#0" />
             <element signature="e#26842#26961#0" />
-            <element signature="e#27022#27203#0" />
             <element signature="e#27276#27380#0" />
             <element signature="e#27308#27370#0" />
             <element signature="e#27475#27579#0" />
@@ -1357,17 +1368,25 @@
             <element signature="e#27848#28063#0" />
             <element signature="e#27872#27967#0" />
             <element signature="e#28105#28141#0" />
-            <element signature="e#28178#31809#0" />
+            <element signature="e#26745#31494#0" />
             <element signature="e#28208#30260#0" />
-            <element signature="e#30318#31807#0" />
+            <element signature="e#28885#31492#0" />
             <element signature="e#30364#30532#0" />
             <element signature="e#30388#30494#0" />
-            <element signature="e#30682#31787#0" />
-            <element signature="e#30961#31241#0" />
-            <element signature="e#31109#31193#0" />
-            <element signature="e#31299#31389#0" />
-            <element signature="e#31448#31541#0" />
-            <element signature="e#31658#31777#0" />
+            <element signature="e#29249#31471#0" />
+            <element signature="e#29660#30111#0" />
+            <element signature="e#29793#30097#0" />
+            <element signature="e#29852#30029#0" />
+            <element signature="e#29898#30007#0" />
+            <element signature="e#30170#30612#0" />
+            <element signature="e#30296#30598#0" />
+            <element signature="e#30355#30531#0" />
+            <element signature="e#30401#30509#0" />
+            <element signature="e#30673#31121#0" />
+            <element signature="e#30803#31107#0" />
+            <element signature="e#30862#31039#0" />
+            <element signature="e#30908#31017#0" />
+            <element signature="e#31342#31461#0" />
             <element signature="e#31839#32655#0" />
             <element signature="e#31872#32653#0" />
             <element signature="e#31937#32646#0" />
@@ -1418,18 +1437,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="139">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleapi/supermarkets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="767" column="21" lean-forward="true" selection-start-line="767" selection-start-column="21" selection-end-line="767" selection-end-column="21" />
         </state>
       </provider>
     </entry>

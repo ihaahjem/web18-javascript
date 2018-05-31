@@ -720,12 +720,12 @@ function initMarkers() {
             }
         })(marker, i));
         //TODO skal denne være med?
-/*
+
         google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
             setTimeout(function() {
                 infowindow.close()},1000);
             }));
-*/
+
         google.maps.event.addListener(map, 'click', (function(marker, i){
             return function() {
                 infowindow.close(map, marker);
@@ -792,43 +792,66 @@ function initKollektivMarkers() {
         marker.setVisible(false);
 
         google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
-            var trikkIconSrc;
-            var bussIconSrc;
-            var tbaneIconSrc;
+
+            var trikkIconSrc = '<img src="bar-marker.png"></img>';
+            var bussIconSrc = '<img src="bar-marker.png"></img>';
+            var tbaneIconSrc = '<img src="bar-marker.png"></img>';
 
 
-            var trikkDivString;
-            var bussDivString;
-            var tbaneDivString;
-            var infoWindowHtml;
+            var trikkDivString = '';
+            var bussDivString = '';
+            var tbaneDivString = '';
+            var infoWindowHtml = '';
 
+            if(kollektivtMarkers[j][5].includes('trikk')) {
+                trikkDivString = '<div id="trikkDiv">' + trikkIconSrc;
 
-            if(kollektivtMarkers[j][5].includes('trikk')){
-                trikkDivString =
-                    '<div id="trikkDiv">'+trikkIconSrc+
+                if (kollektivtMarkers[j][6] !== undefined) {
                     kollektivtMarkers[j][6].forEach(s => {
-                        '<label for=trikkboks>'+s+'</label>'
+                        if(s !== undefined) {
+                            trikkDivString += '<div class="boks">' + s + '</div>'
+                        }
                     });
-
-                    '</div>';
-
+                    trikkDivString += '</div>';
+                }
             }
+
             if (kollektivtMarkers[j][5].includes('buss')){
-                bussDivString = '<div id="bussDiv">'+bussIconSrc+'</div>';
+                bussDivString = '<div id="bussDiv">'+bussIconSrc;
+
+                if(kollektivtMarkers[j][7] !== undefined){
+                    kollektivtMarkers[j][7].forEach(s => {
+                        if(s !== undefined) {
+                            bussDivString += '<div class="boks">' + s + '</div>'
+                        }
+                    });
+                    bussDivString += '</div>';
+                }
             }
-            if (kollektivtMarkers[j][5].includes('tbane')){
-                tbaneDivString = '<div id="tbaneDiv">'+tbaneIconSrc+'</div>';
+
+            if (kollektivtMarkers[j][5].includes('t-bane')){
+                tbaneDivString = '<div id="tbaneDiv">'+tbaneIconSrc;
+
+                if(kollektivtMarkers[j][8] !== undefined) {
+                    kollektivtMarkers[j][8].forEach(s => {
+                        if(s !== undefined) {
+                            tbaneDivString += '<div class="boks">' + s + '</div>'
+                        }
+                    });
+                    tbaneDivString += '</div>';
+                }
             }
 
+            infoWindowHtml = trikkDivString + bussDivString + tbaneDivString;
 
-            var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>')
-
+            var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>') + infoWindowHtml;
 
             return function () {
                 infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
             }
         })(marker, j));
+
     }
 }
 
