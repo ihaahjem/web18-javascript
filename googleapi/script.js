@@ -21,7 +21,7 @@ var markers = [
     ['Munchies', 59.91638, 10.7490935, 9, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/munchies.jpg', 'Adresse:  Torggata 18c, 0181 Oslo', '11.00 - 22.00', '11.00 - 03.00'],
     ['Haralds Vaffler', 59.913759, 10.745212, 10, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/vafler.jpg', 'Adresse: Torggata 7, 0181 Oslo', '11.00 - 20.00', '11.00 - 20.00'],
     ['Würst', 59.9137012, 10.7465163, 11, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/wurst.jpg', 'Adresse: Torggata 11, 0181 Oslo', '13.00 - 00.30', '13.00 - 03.00'],
-    ['Bari Pizza', 59.9166197, 10.7527744, 12, 'food', 'ood-marker.png', 'http://facebook.com', 'infovindu-bilder/bari-pizza.jpg', 'Adresse: Torggata 23, 0183 Oslo', '12.00 - 00.00', '12.00 - 03.00'],
+    ['Bari Pizza', 59.9166197, 10.7527744, 12, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/bari-pizza.jpg', 'Adresse: Torggata 23, 0183 Oslo', '12.00 - 00.00', '12.00 - 03.00'],
 //
 //Bar/utested markører
 //
@@ -57,8 +57,8 @@ var markers = [
     ['REMA 1000', 59.919193, 10.7470611, 36, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Fredensborgveien 24, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
     ['REMA 1000', 59.9200256, 10.7386707, 37, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Pilestredet Park 31, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
     ['Rema 1000 Vulkan', 59.92329949999999, 10.7512015, 38, 'matbutikk', 'supermarket.png', 'gym-marker.png', 'http://dogs.com', 'infovindu-bilder/rema.png', 'Adresse: Maridalsveien 15, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
-    ['Bunnpris Gunerius', 59.9138834, 10.7536016, 39, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/bunnpris.png', 'Adresse: Storgata 32, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)']
-
+    ['Bunnpris Gunerius', 59.9138834, 10.7536016, 39, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/bunnpris.png', 'Adresse: Storgata 32, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)'],
+    ['Food Express Grocery', 59.9161715, 10.7595113, 40, 'matbutikk', 'supermarket.png', 'http://dogs.com', 'infovindu-bilder/foodexpress.jpg', 'Adresse: Storgata 32, Oslo', '06.00 - 24.00', '07.00 - 24.00 (stengt søndag)']
 ];
 var kollektivtMarkers = [
     //kollektivt
@@ -83,8 +83,10 @@ var center = {
     lat: 0,
     lng: 0
 };
+
+
 var options = {
-    zoom:15,
+    zoom: 15,
     maxZoom : 17,
     minZoom: 13,
     center: {
@@ -637,9 +639,6 @@ window.onload = function () {
 
 $(".chk-btn").on('change', filterMarkers)
 
-$(".chk-btn#clear").on('change', clearFilters)
-
-
 function initMap() {
     findUserPosition();
     findCenter();
@@ -670,194 +669,198 @@ function findCenter() {
 }
 
 function initMarkers() {
-    for(var i = 0; i < markers.length; i++){
-        var title;
-        if(i <= 3){
-            title = markers[i][0];
-        }
-        else{
-            title = " ";
-        }
+    for (var i = 0; i < markers.length; i++) {
+
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(markers[i][1], markers[i][2]),
             label: {
-                text: title,
+                text: markers[i][0],
                 color: 'black',
-                fontWeight:'bold',
-                fontSize: '16px'
+                fontSize: '12px',
+
             },
             map: map,
             icon: icon = {
                 scaledSize: new google.maps.Size(30, 30),
-                url: markers[i][5]
+                url: markers[i][5],
+                labelOrigin: new google.maps.Point(15, 40)
             }
         });
 
         marker.setVisible(false);
 
-        if(i < 4){
+        if (i < 4) {
             marker.setVisible(true)
         }
 
-        google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
-
-        var infoWindowContent = (
-            '<div    id="window">' +
-            '<img    id="infoImg" src='+markers[i][7]+'>' +
-            '<p      id="stedsNavn" class="windowTekst"> '+markers[i][0]+'</p>' +
-            '<p      id="adresse" class="windowTekst"> '+markers[i][8]+'</p>' +
-            '<p      id="apninstidUke" class="windowTekst">'+markers[i][9]+'</p>' +
-            '<p      id="apninstidHelg" class="windowTekst">'+markers[i][10]+'</p>' +
-            '<button id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.bike)">Sy</button>' +
-            '<button id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.walk)">Gå</button>' +
-            '<button id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.drive)">Mi</button>' +
-            '<button id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton('+ i +', travelModes.transit)">Of</button>' +
-            '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">Mo</button>' +
-            '</div>');
-
-            return function() {
-                infowindow.setContent(infoWindowContent);
-                infowindow.open(map, marker);
-            }
-        })(marker, i));
-        //TODO skal denne være med?
-
-
-
-        google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
-            setTimeout(function() {
-                infowindow.close()},1000);
-            }));
-
-        google.maps.event.addListener(map, 'click', (function(marker, i){
-            return function() {
-                infowindow.close(map, marker);
-            }
-        })(marker, i));
-
-        google.maps.event.addListener(infowindow, 'click', (function(marker, i){
-            return function() {
-                infowindow.close(map, marker);
-            }
-        })(marker, i));
-        gMarkers[i] = marker
-    }
-}
-
-function initBysykkelMarkers() {
-    bysykkelMarkers.forEach(marker => {
-        marker.setMap(null);
-    });
-    bysykkelMarkers = bysykkelStationsWithAvailability().map(s => {
-        return new google.maps.Marker({
-            position: {
-                lat: s.center.latitude,
-                lng: s.center.longitude
-            },
-            icon: MapIconGenerator(s.availability.bikes),
-            map: this.map,
-        })
-    })
-    bysykkelMarkers.forEach(s => {
-        s.setVisible(false);
-    })
-}
-
-function initKollektivMarkers() {
-    var kollektivtMarkers = [
-        //kollektivt
-        ['Heimdalsgata', 59.918500, 10.761413, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['17'], ['30', '31', '31E', 'N390']],
-        ['Hausmannsgate', 59.918339, 10.760560, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['11', '12', '13', '17'], ['30', '31', '31E', 'N11', 'N12', 'N390']],
-        ['Lakkegata skole', 59.920629, 10.768365, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['17'], ['31', '31E', 'N390']],
-        ['Vahls gate', 59.916069, 10.763558, 'holdeplass', ['fjerdingen'], ['buss'], [], ['380', '390', '390E'], []],
-        ['Grønland T-bane', 59.918339, 10.760560, 'holdeplass', ['fjerdingen'], ['t-bane'], [], [], ['1', '2', '3', '4', '5']],
-        ['Brugata', 59.914780, 10.753317, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['11', '12', '13', '17'], ['30', '31', '31E', '34', '54', 'N11', 'N12', 'N390']],
-        ['Hammersborggata', 59.915000, 10.752212, 'holdeplass', ['fjerdingen'], ['buss'], [], ['150', '160', '250', '250E', '255E', '265E', 'N1', 'N2', 'N11', 'N18', 'N130', 'N140', 'N250']],
-        ['Dronningensgate', 59.910753, 10.746503, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
-        ['Øvre Slottsgate', 59.912216, 10.741954, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
-        ['Wessels Plass', 59.912087, 10.738758, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
-        ['Stortinget', 59.913797, 10.740925, 'holdeplass', ['kvadradturen'], ['t-bane'], [], [], ['1', '2', '3', '4', '5']],
-        ['Møllerveien', 59.920786, 10.751499, 'holdeplass', ['vulkan'], ['buss'], ['34', '54']],
-        ['Schous Plass', 59.921044, 10.759481, 'holdeplass', ['vulkan', 'fjerdingen'], ['trikk'], ['11', '12', '13', '19']],
-        ['Jernbanetorget', 59.912022, 10.750408, 'holdeplass', ['fjerdingen', 'kvadradturen', 'vulkan', 'brenneriveien'], ['trikk', 'buss', 't-bane'], ['11', '12', '13', '17', '18', '19'], ['30', '31', '31E', '36E', '54', 'N5', 'N12', 'N30'], ['1', '2', '3', '4', '5']]
-    ];
-
-    for (var j = 0; j < kollektivtMarkers.length; j++) {
-        var marker = new google.maps.Marker({
-            position: {
-                lat: kollektivtMarkers[j][1],
-                lng: kollektivtMarkers[j][2]
-            },
-            map: this.map,
-        })
-        kMarkers.push(marker);
-
-        marker.setVisible(false);
-
         google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
 
-            var trikkIconSrc = '<img src="bar-marker.png"></img>';
-            var bussIconSrc = '<img src="bar-marker.png"></img>';
-            var tbaneIconSrc = '<img src="bar-marker.png"></img>';
-
-
-            var trikkDivString = '';
-            var bussDivString = '';
-            var tbaneDivString = '';
-            var infoWindowHtml = '';
-
-            if(kollektivtMarkers[j][5].includes('trikk')) {
-                trikkDivString = '<div id="trikkDiv">' + trikkIconSrc;
-
-                if (kollektivtMarkers[j][6] !== undefined) {
-                    kollektivtMarkers[j][6].forEach(s => {
-                        if(s !== undefined) {
-                            trikkDivString += '<div class="boks">' + s + '</div>'
-                        }
-                    });
-                    trikkDivString += '</div>';
-                }
-            }
-
-            if (kollektivtMarkers[j][5].includes('buss')){
-                bussDivString = '<div id="bussDiv">'+bussIconSrc;
-
-                if(kollektivtMarkers[j][7] !== undefined){
-                    kollektivtMarkers[j][7].forEach(s => {
-                        if(s !== undefined) {
-                            bussDivString += '<div class="boks">' + s + '</div>'
-                        }
-                    });
-                    bussDivString += '</div>';
-                }
-            }
-
-            if (kollektivtMarkers[j][5].includes('t-bane')){
-                tbaneDivString = '<div id="tbaneDiv">'+tbaneIconSrc;
-
-                if(kollektivtMarkers[j][8] !== undefined) {
-                    kollektivtMarkers[j][8].forEach(s => {
-                        if(s !== undefined) {
-                            tbaneDivString += '<div class="boks">' + s + '</div>'
-                        }
-                    });
-                    tbaneDivString += '</div>';
-                }
-            }
-
-            infoWindowHtml = trikkDivString + bussDivString + tbaneDivString;
-
-            var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>' + infoWindowHtml);
+            var infoWindowContent = (
+                '<div    id="window">' +
+                '<img    id="infoImg" src=' + markers[i][7] + '>' +
+                '<p      id="stedsNavn" class="windowTekst"> ' + markers[i][0] + '</p>' +
+                '<p      id="adresse" class="windowTekst"> ' + markers[i][8] + '</p>' +
+                '<p      id="apninstidUke" class="windowTekst">' + markers[i][9] + '</p>' +
+                '<p      id="apninstidHelg" class="windowTekst">' + markers[i][10] + '</p>' +
+                '<button id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.bike)">Sy</button>' +
+                '<button id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.walk)">Gå</button>' +
+                '<button id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.drive)">Mi</button>' +
+                '<button id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.transit)">Of</button>' +
+                '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">Mo</button>' +
+                '</div>');
 
             return function () {
                 infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
             }
-        })(marker, j));
+        })(marker, i));
+
+        //TODO skal denne være med?
+        google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
+            setTimeout(function() {
+                infowindow.close()},1000);
+            }));
+
+        google.maps.event.addListener(map, 'click', (function (marker, i) {
+            return function () {
+                infowindow.close(map, marker);
+            }
+        })(marker, i));
+
+        google.maps.event.addListener(infowindow, 'click', (function (marker, i) {
+            return function () {
+                infowindow.close(map, marker);
+            }
+        })(marker, i));
+        gMarkers[i] = marker
 
     }
 }
+    function initBysykkelMarkers() {
+        bysykkelMarkers.forEach(marker => {
+            marker.setMap(null);
+    })
+        ;
+        bysykkelMarkers = bysykkelStationsWithAvailability().map(s => {
+            return new google.maps.Marker({
+                position: {
+                    lat: s.center.latitude,
+                    lng: s.center.longitude
+                },
+                icon: MapIconGenerator(s.availability.bikes),
+                map: this.map,
+            })
+        }
+    )
+        bysykkelMarkers.forEach(s => {
+            s.setVisible(false);
+    })
+    }
 
+    function initKollektivMarkers() {
+        var kollektivtMarkers = [
+            //kollektivt
+            ['Heimdalsgata', 59.918500, 10.761413, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['17'], ['30', '31', '31E', 'N390']],
+            ['Hausmannsgate', 59.918339, 10.760560, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['11', '12', '13', '17'], ['30', '31', '31E', 'N11', 'N12', 'N390']],
+            ['Lakkegata skole', 59.920629, 10.768365, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['17'], ['31', '31E', 'N390']],
+            ['Vahls gate', 59.916069, 10.763558, 'holdeplass', ['fjerdingen'], ['buss'], [], ['380', '390', '390E'], []],
+            ['Grønland T-bane', 59.918339, 10.760560, 'holdeplass', ['fjerdingen'], ['t-bane'], [], [], ['1', '2', '3', '4', '5']],
+            ['Brugata', 59.914780, 10.753317, 'holdeplass', ['fjerdingen'], ['trikk', 'buss'], ['11', '12', '13', '17'], ['30', '31', '31E', '34', '54', 'N11', 'N12', 'N390']],
+            ['Hammersborggata', 59.915000, 10.752212, 'holdeplass', ['fjerdingen'], ['buss'], [], ['150', '160', '250', '250E', '255E', '265E', 'N1', 'N2', 'N11', 'N18', 'N130', 'N140', 'N250']],
+            ['Dronningensgate', 59.910753, 10.746503, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
+            ['Øvre Slottsgate', 59.912216, 10.741954, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
+            ['Wessels Plass', 59.912087, 10.738758, 'holdeplass', ['kvadradturen'], ['trikk'], ['12', '13', '19'], [], []],
+            ['Stortinget', 59.913797, 10.740925, 'holdeplass', ['kvadradturen'], ['t-bane'], [], [], ['1', '2', '3', '4', '5']],
+            ['Møllerveien', 59.920786, 10.751499, 'holdeplass', ['vulkan'], ['buss'], ['34', '54']],
+            ['Schous Plass', 59.921044, 10.759481, 'holdeplass', ['vulkan', 'fjerdingen'], ['trikk'], ['11', '12', '13', '19']],
+            ['Jernbanetorget', 59.912022, 10.750408, 'holdeplass', ['fjerdingen', 'kvadradturen', 'vulkan', 'brenneriveien'], ['trikk', 'buss', 't-bane'], ['11', '12', '13', '17', '18', '19'], ['30', '31', '31E', '36E', '54', 'N5', 'N12', 'N30'], ['1', '2', '3', '4', '5']]
+        ];
+
+        for (var j = 0; j < kollektivtMarkers.length; j++) {
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: kollektivtMarkers[j][1],
+                    lng: kollektivtMarkers[j][2]
+                },
+                map: this.map,
+            })
+            kMarkers.push(marker);
+
+            marker.setVisible(false);
+
+            google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
+
+                var trikkIconSrc = '<img src="bar-marker.png"></img>';
+                var bussIconSrc = '<img src="bar-marker.png"></img>';
+                var tbaneIconSrc = '<img src="bar-marker.png"></img>';
+
+
+                var trikkDivString = '';
+                var bussDivString = '';
+                var tbaneDivString = '';
+                var infoWindowHtml = '';
+
+                if (kollektivtMarkers[j][5].includes('trikk')) {
+                    trikkDivString = '<div id="trikkDiv">' + trikkIconSrc;
+
+                    if (kollektivtMarkers[j][6] !== undefined) {
+                        kollektivtMarkers[j][6].forEach(s => {
+                            if(s !== undefined
+                    )
+                        {
+                            trikkDivString += '<div class="boks">' + s + '</div>'
+                        }
+                    })
+                        ;
+                        trikkDivString += '</div>';
+                    }
+                }
+
+                if (kollektivtMarkers[j][5].includes('buss')) {
+                    bussDivString = '<div id="bussDiv">' + bussIconSrc;
+
+                    if (kollektivtMarkers[j][7] !== undefined) {
+                        kollektivtMarkers[j][7].forEach(s => {
+                            if(s !== undefined
+                    )
+                        {
+                            bussDivString += '<div class="boks">' + s + '</div>'
+                        }
+                    })
+                        ;
+                        bussDivString += '</div>';
+                    }
+                }
+
+                if (kollektivtMarkers[j][5].includes('t-bane')) {
+                    tbaneDivString = '<div id="tbaneDiv">' + tbaneIconSrc;
+
+                    if (kollektivtMarkers[j][8] !== undefined) {
+                        kollektivtMarkers[j][8].forEach(s => {
+                            if(s !== undefined
+                    )
+                        {
+                            tbaneDivString += '<div class="boks">' + s + '</div>'
+                        }
+                    })
+                        ;
+                        tbaneDivString += '</div>';
+                    }
+                }
+
+                infoWindowHtml = trikkDivString + bussDivString + tbaneDivString;
+
+                var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>' + infoWindowHtml);
+
+                return function () {
+                    infowindow.setContent(infoWindowContent);
+                    infowindow.open(map, marker);
+                }
+            })(marker, j));
+
+        }
+    }
+    
 function clearFilters() {
     $('.chk-btn#clear').prop('checked', true); // Checks it
     $('.chk-btn').prop('checked', false); // Checks it
@@ -873,6 +876,7 @@ function findUserPosition() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+
             var infoWindow = new google.maps.Marker(
                 {
                     position: pos,
@@ -880,8 +884,15 @@ function findUserPosition() {
                     title: "Her er du",
                     icon: userMarker = {
                         scaledSize: new google.maps.Size(20, 20),
-                        url: "blaa-dot.png"
-                    }
+                        url: "blaa-dot.png",
+                        labelOrigin: new google.maps.Point(10, 26)
+                    },
+                    label: {
+                        text: 'Her er du',
+                        color: 'black',
+                        fontSize: '10px',
+
+                    },
                 }
             );
             this.map.setCenter(center);
@@ -890,148 +901,173 @@ function findUserPosition() {
                 position: userPosition,
             });
         })
-    }
-}
-
-function initDirections() {
-    directionsDisplay.setMap(map);
-    directionsDisplay.setPanel(document.getElementById('right-panel'));
-
-    /*
-    document.getElementById('mode').addEventListener('change', function() {
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-    });
-    */
-}
-
-function findDirectionsFromButton(i, travelMode) {
-    var directionRequest = {
-        origin: userPosition,
-        destination: {
-            lat: markers[i][1],
-            lng: markers[i][2]
-        },
-        travelMode: travelMode,
-        provideRouteAlternatives: true
-    };
-    directionsService.route(directionRequest,
-        function(response, status) {
-            if (status == 'OK') {
-                directionsDisplay.setDirections(response);
-            } else {
-                window.alert('Directions request failed due to ' + status);
-            }
-        });
-    infowindow.close();
-}
-
-function infoLink(markerNumber){
-    console.log(markerNumber);
-
-    for(var i = 0; i < markers.length; i++){
-        if(markerNumber === markers[i][3]){
-            window.location.replace(markers[i][6]);
         }
     }
-    infowindow.close();
-}
+
+    function initDirections() {
+        directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('right-panel'));
+
+        /*
+        document.getElementById('mode').addEventListener('change', function() {
+            calculateAndDisplayRoute(directionsService, directionsDisplay);
+        });
+        */
+    }
+
+    function findDirectionsFromButton(i, travelMode) {
+        var directionRequest = {
+            origin: userPosition,
+            destination: {
+                lat: markers[i][1],
+                lng: markers[i][2]
+            },
+            travelMode: travelMode,
+            provideRouteAlternatives: true
+        };
+        directionsService.route(directionRequest,
+            function (response, status) {
+                if (status == 'OK') {
+                    directionsDisplay.setDirections(response);
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            });
+        infowindow.close();
+    }
+
+    function infoLink(markerNumber) {
+        console.log(markerNumber);
+
+        for (var i = 0; i < markers.length; i++) {
+            if (markerNumber === markers[i][3]) {
+                window.location.replace(markers[i][6]);
+            }
+        }
+        infowindow.close();
+    }
 
 //Bysykkel
-function bysykkelImportStations() {
-    return axios.get('http://188.166.72.34:8080/stations')
-        .then(response => {
+    function bysykkelImportStations() {
+        return axios.get('http://188.166.72.34:8080/stations')
+            .then(response => {
             stations = response.data;
-        })
-        .catch(e => {
+    })
+    .
+        catch(e => {
             this.errors.push(e);
-        });
+    })
+        ;
 
-}
+    }
 
-function bysykkelLoadAvailability() {
-    return axios.get('http://188.166.72.34:8080/stations/availability/')
-        .then(response => {
+    function bysykkelLoadAvailability() {
+        return axios.get('http://188.166.72.34:8080/stations/availability/')
+            .then(response => {
             availability = response.data.reduce((result, item) => {
                 result[item.id] = item;
-                return result;
-            }, {});
-        })
-        .catch(e => {
-            this.errors.push(e);
-        });
-}
-
-function bysykkelStationsWithAvailability() {
-    return stations.map(station => {
-        return {...station, availability: availability[station.id]}
+        return result;
+    },
+        {
+        }
+    )
+        ;
     })
-}
-
-function MapIconGenerator(text = null, theme = defaultTheme) {
-    text = '' +text
-    if (text === '0') {
-        theme = themes.noBikes;
-    }
-    else{
-        theme = themes.defaultTheme
+    .
+        catch(e => {
+            this.errors.push(e);
+    })
+        ;
     }
 
-    const circle = generateCircle(theme)
-    if (text !== null) {
-        const context = circle.getContext('2d')
-        text = text.substring(0, 3)
-        context.beginPath()
-        context.font = font
-        const textSize = textDimension(text, font, config.size)
-        context.fillStyle = theme.text
-        context.fillText(text, config.size / 2 - textSize.width / 2 - textSize.xDelta, config.size / 2 + textSize.height / 2)
+    function bysykkelStationsWithAvailability() {
+        return stations.map(station => {
+            return {...station, availability: availability[station.id]
+        }
+    })
     }
-    return {
-        url: circle.toDataURL(),
-        scaledSize: {
-            height: config.size / 3,
-            width: config.size / 3
+
+    function MapIconGenerator(text = null, theme = defaultTheme) {
+        text = '' + text
+        if (text === '0') {
+            theme = themes.noBikes;
+        }
+        else {
+            theme = themes.defaultTheme
+        }
+
+        const circle = generateCircle(theme)
+        if (text !== null) {
+            const context = circle.getContext('2d')
+            text = text.substring(0, 3)
+            context.beginPath()
+            context.font = font
+            const textSize = textDimension(text, font, config.size)
+            context.fillStyle = theme.text
+            context.fillText(text, config.size / 2 - textSize.width / 2 - textSize.xDelta, config.size / 2 + textSize.height / 2)
+        }
+        return {
+            url: circle.toDataURL(),
+            scaledSize: {
+                height: config.size / 3,
+                width: config.size / 3
+            }
         }
     }
-}
 
-function filterBysykkelStationsOnDistance() {
+    function filterBysykkelStationsOnDistance() {
 
-    var markersToFilterBysykkelMarkers = gMarkers.map(m => {
-        if( ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), fjerdingenMarker.getPosition())) === 0) ||
+        var markersToFilterBysykkelMarkers = gMarkers.map(m => {
+                if(((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), fjerdingenMarker.getPosition())) === 0) ||
             ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), vulkanMarker.getPosition())) === 0) ||
             ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), kvadratturenMarker.getPosition())) === 0) ||
             ((google.maps.geometry.spherical.computeDistanceBetween(m.getPosition(), brenneriveienMarker.getPosition())) === 0)
-        ){
+    )
+        {
             return m;
         }
-    }).filter(m => {
-        return m !== undefined;
-    });
+    }).
+        filter(m => {
+            return m !== undefined;
+    })
+        ;
 
-    markersToFilterBysykkelMarkers.forEach(s => {
-        if(s === undefined){
+        markersToFilterBysykkelMarkers.forEach(s => {
+            if(s === undefined
+    )
+        {
             console.log('hei');
         }
-    });
+    })
+        ;
 
-    bysykkelMarkers.forEach(s => {
-        if(s === undefined){
+        bysykkelMarkers.forEach(s => {
+            if(s === undefined
+    )
+        {
             console.log('hei');
         }
-    });
+    })
+        ;
 
-    bysykkelMarkers.forEach(bysykkelMarker => {
-        markersToFilterBysykkelMarkers.forEach(marker => {
-                if ((google.maps.geometry.spherical.computeDistanceBetween(marker.getPosition(), bysykkelMarker.getPosition()) < 450) ||
-                    (google.maps.geometry.spherical.computeDistanceBetween(userMarker.getPosition(), bysykkelMarker.getPosition()) < 450)) {
-                    bysykkelMarker.setVisible(true);
-                }
-        })
-    });
+        bysykkelMarkers.forEach(bysykkelMarker => {
+            markersToFilterBysykkelMarkers.forEach(marker => {
+            if((google.maps.geometry.spherical.computeDistanceBetween(marker.getPosition(), bysykkelMarker.getPosition()) < 450) ||
+        (google.maps.geometry.spherical.computeDistanceBetween(userMarker.getPosition(), bysykkelMarker.getPosition()) < 450)
+    )
+        {
+            bysykkelMarker.setVisible(true);
+        }
+    })
+    })
+        ;
 
 
-}
+    }
+
+
+
+
 
 
 
