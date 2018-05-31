@@ -579,7 +579,6 @@ const generateCircle = (theme) => {
     return canvas
 }
 
-
 //directions
 var directionsDisplay = new google.maps.DirectionsRenderer;
 directionsDisplay.setOptions({
@@ -629,7 +628,6 @@ function filterMarkers(category)    {
                     s.setVisible(false);
                 })
             }
-
     }
 
 window.onload = function () {
@@ -638,6 +636,9 @@ window.onload = function () {
 };
 
 $(".chk-btn").on('change', filterMarkers)
+
+$(".chk-btn#clear").on('change', clearFilters)
+
 
 function initMap() {
     findUserPosition();
@@ -720,6 +721,8 @@ function initMarkers() {
             }
         })(marker, i));
         //TODO skal denne være med?
+
+
 
         google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
             setTimeout(function() {
@@ -844,7 +847,7 @@ function initKollektivMarkers() {
 
             infoWindowHtml = trikkDivString + bussDivString + tbaneDivString;
 
-            var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>') + infoWindowHtml;
+            var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>' + infoWindowHtml);
 
             return function () {
                 infowindow.setContent(infoWindowContent);
@@ -853,6 +856,14 @@ function initKollektivMarkers() {
         })(marker, j));
 
     }
+}
+
+function clearFilters() {
+    $('.chk-btn#clear').prop('checked', true); // Checks it
+    $('.chk-btn').prop('checked', false); // Checks it
+    $('.chk-btn#school').prop('checked', true); // Checks it
+
+    filterMarkers();
 }
 
 function findUserPosition() {
