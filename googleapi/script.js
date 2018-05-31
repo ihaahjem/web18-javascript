@@ -581,7 +581,6 @@ const generateCircle = (theme) => {
     return canvas
 }
 
-
 //directions
 var directionsDisplay = new google.maps.DirectionsRenderer;
 directionsDisplay.setOptions({
@@ -631,7 +630,6 @@ function filterMarkers(category)    {
                     s.setVisible(false);
                 })
             }
-
     }
 
 window.onload = function () {
@@ -640,8 +638,6 @@ window.onload = function () {
 };
 
 $(".chk-btn").on('change', filterMarkers)
-
-
 
 function initMap() {
     findUserPosition();
@@ -718,13 +714,12 @@ function initMarkers() {
                 infowindow.open(map, marker);
             }
         })(marker, i));
-        //TODO skal denne være med?
 
-        google.maps.event.addListener(marker, 'mouseout', (function (marker, i) {
-            setTimeout(function () {
-                infowindow.close()
-            }, 1000);
-        }));
+        //TODO skal denne være med?
+        google.maps.event.addListener(marker, 'mouseout', (function(marker, i){
+            setTimeout(function() {
+                infowindow.close()},1000);
+            }));
 
         google.maps.event.addListener(map, 'click', (function (marker, i) {
             return function () {
@@ -855,7 +850,7 @@ function initMarkers() {
 
                 infoWindowHtml = trikkDivString + bussDivString + tbaneDivString;
 
-                var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>') + infoWindowHtml;
+                var infoWindowContent = ('<h1>' + kollektivtMarkers[i][0] + '</h1>' + infoWindowHtml);
 
                 return function () {
                     infowindow.setContent(infoWindowContent);
@@ -865,14 +860,23 @@ function initMarkers() {
 
         }
     }
+    
+function clearFilters() {
+    $('.chk-btn#clear').prop('checked', true); // Checks it
+    $('.chk-btn').prop('checked', false); // Checks it
+    $('.chk-btn#school').prop('checked', true); // Checks it
 
-    function findUserPosition() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                var pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
+    filterMarkers();
+}
+
+function findUserPosition() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
             var infoWindow = new google.maps.Marker(
                 {
                     position: pos,
