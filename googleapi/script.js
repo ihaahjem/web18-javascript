@@ -6,10 +6,10 @@ var markers = [
 //
 //Skole markører
 //
-    ['Campus Fjerdingen', 59.916224, 10.759697, 0, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/fjerdingen.jpg', 'Adresse: Chr. Krohgs gate 32, 0186 Oslo', '08.00 – 24.00', '10.00 – 23.00'],
-    ['Campus Vulkan', 59.9233391, 10.7503081, 1, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/vulkan.jpg', 'Adresse: Vulkan 19, 0178 Oslo', '08.00 – 22.00', '10.00-18.00'],
-    ['Campus Brenneriveien', 59.920352, 10.7506041, 2, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/brenneriveien.jpg', 'Adresse: Brenneriveien 9, 0182 Oslo', '07.30 – 24.00', '10.00 – 23.00'],
-    ['Campus Kvadraturen', 59.911015, 10.7439543, 3, 'school', 'sirkelmarker.png', 'http://facebook.com', 'infovindu-bilder/hk.jpg', 'Adresse: Kirkegata 24-26, 0153 Oslo', '08.00 – 23.00', '09.00 – 17.00'],
+    ['Campus Fjerdingen', 59.916224, 10.759697, 0, 'school', 'sirkelmarker.png', '/fjerdingen', 'infovindu-bilder/fjerdingen.jpg', 'Adresse: Chr. Krohgs gate 32, 0186 Oslo', '08.00 – 24.00', '10.00 – 23.00'],
+    ['Campus Vulkan', 59.9233391, 10.7503081, 1, 'school', 'sirkelmarker.png', '/vulkan', 'infovindu-bilder/vulkan.jpg', 'Adresse: Vulkan 19, 0178 Oslo', '08.00 – 22.00', '10.00-18.00'],
+    ['Campus Brenneriveien', 59.920352, 10.7506041, 2, 'school', 'sirkelmarker.png', '/brenneriveien', 'infovindu-bilder/brenneriveien.jpg', 'Adresse: Brenneriveien 9, 0182 Oslo', '07.30 – 24.00', '10.00 – 23.00'],
+    ['Campus Kvadraturen', 59.911015, 10.7439543, 3, 'school', 'sirkelmarker.png', '/kvadraturen', 'infovindu-bilder/hk.jpg', 'Adresse: Kirkegata 24-26, 0153 Oslo', '08.00 – 23.00', '09.00 – 17.00'],
 //
 //Spisested markører
 //
