@@ -455,7 +455,6 @@ var options = {
     mapTypeControl : false
 };
 
-
 var fjerdingenMarker = new google.maps.Marker({
     position: {
         lat: 59.916224,
@@ -496,9 +495,9 @@ const config = {
     size: 78,
     strokeWidth: 3,
     font: {
-        family: 'Roboto Slab',
+        family: 'Graphik-Semibold',
         weight: 700,
-        size: 36
+        size: 56
     }
 }
 const font = config.font.weight + ' ' + config.font.size + 'px ' + config.font.family
@@ -860,7 +859,7 @@ function initMarkers() {
 
         }
     }
-    
+
 function clearFilters() {
     $('.chk-btn#clear').prop('checked', true); // Checks it
     $('.chk-btn').prop('checked', false); // Checks it
