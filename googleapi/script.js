@@ -16,7 +16,7 @@ var markers = [
     ['Talor og Jørgen', 59.9149799, 10.7504415, 4, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Youngs gate 9, 0181 Oslo', '07.30 - 17.00', '12.00 - 17.00'],
     ['Mathallen', 59.922217, 10.749852, 5, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/mathallen.jpg', 'Adresse: Vulkan 5, 0178 Oslo', '10.00 - 20.00 (stengt mandag)', '11.00 - 18.00'],
     ['Taco República', 59.9170294, 10.7509215, 6, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/taco-republica.jpg', 'Adresse: Torggata 30, 0183 Oslo', '16.00 - 23.00 (stengt mandag)', '12.00 - 00.30'],
-    ['Freddy Fuego', 59.9178054, 10.7515039, 7, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/t&j.jpg', 'Adresse: Hausmanns gate 31a, 0182 Oslo', '11.00 - 21.00', '11.00 - 23.00'],
+    ['Freddy Fuego', 59.9178054, 10.7515039, 7, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/freddyfuego.jpeg', 'Adresse: Hausmanns gate 31a, 0182 Oslo', '11.00 - 21.00', '11.00 - 23.00'],
     ['Peloton', 59.9174132, 10.7522924, 8, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/peloton.jpg', 'Adresse: Torggata 35, 0183 Oslo', '08.00 - 11.30', '11.00 - 03.30'],
     ['Munchies', 59.91638, 10.7490935, 9, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/munchies.jpg', 'Adresse:  Torggata 18c, 0181 Oslo', '11.00 - 22.00', '11.00 - 03.00'],
     ['Haralds Vaffler', 59.913759, 10.745212, 10, 'food', 'food-marker.png', 'http://facebook.com', 'infovindu-bilder/vafler.jpg', 'Adresse: Torggata 7, 0181 Oslo', '11.00 - 20.00', '11.00 - 20.00'],
@@ -671,11 +671,11 @@ function initMarkers() {
                 '<p      id="adresse" class="windowTekst"> ' + markers[i][8] + '</p>' +
                 '<p      id="apninstidUke" class="windowTekst">' + markers[i][9] + '</p>' +
                 '<p      id="apninstidHelg" class="windowTekst">' + markers[i][10] + '</p>' +
-                '<button id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.bike)">Sy</button>' +
-                '<button id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.walk)">Gå</button>' +
-                '<button id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.drive)">Mi</button>' +
-                '<button id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.transit)">Of</button>' +
-                '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">Mo</button>' +
+                '<input type="image" id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.bike)" src="infovindu-bilder/sykkel.png">' +
+                '<input type="image" id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.walk)" src="infovindu-bilder/walk.png">' +
+                '<input type="image" id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.drive)" src="infovindu-bilder/bil.png">' +
+                '<input type="image" id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.transit)" src="infovindu-bilder/kollektivt.png">' +
+                '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">More Info</button>' +
                 '</div>');
 
             return function () {
