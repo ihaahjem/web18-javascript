@@ -702,9 +702,9 @@ function initMarkers() {
                 '<p      id="adresse" class="windowTekst"> ' + markers[i][8] + '</p>' +
                 '<p      id="apninstidUke" class="windowTekst">' + markers[i][9] + '</p>' +
                 '<p      id="apninstidHelg" class="windowTekst">' + markers[i][10] + '</p>' +
-                '<button id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.bike)">Sy</button>' +
+                '<button id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.bike)">sy</button>' +
                 '<button id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.walk)">Gå</button>' +
-                '<button id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.drive)">Mi</button>' +
+                '<button id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.drive)">kj</button>' +
                 '<button id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.transit)">Of</button>' +
                 '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">Mo</button>' +
                 '</div>');
