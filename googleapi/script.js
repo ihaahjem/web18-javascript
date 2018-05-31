@@ -702,11 +702,11 @@ function initMarkers() {
                 '<p      id="adresse" class="windowTekst"> ' + markers[i][8] + '</p>' +
                 '<p      id="apninstidUke" class="windowTekst">' + markers[i][9] + '</p>' +
                 '<p      id="apninstidHelg" class="windowTekst">' + markers[i][10] + '</p>' +
-                '<button id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.bike)">sy</button>' +
-                '<button id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.walk)">Gå</button>' +
-                '<button id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.drive)">kj</button>' +
-                '<button id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.transit)">Of</button>' +
-                '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">Mo</button>' +
+                '<input type="image" id="bike-btn" class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.bike)" src="infovindu-bilder/sykkel.png">' +
+                '<input type="image" id="walk-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.walk)" src="infovindu-bilder/walk.png">' +
+                '<input type="image" id="drive-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.drive)" src="infovindu-bilder/bil.png">' +
+                '<input type="image" id="transit-btn"  class="windowBtnClass" onclick="findDirectionsFromButton(' + i + ', travelModes.transit)" src="infovindu-bilder/kollektivt.png">' +
+                '<button id="info-btn"  class="windowBtnClass" onclick="infoLink(' + i + ')">More Info</button>' +
                 '</div>');
 
             return function () {
