@@ -1,4 +1,82 @@
 
+
+#trikkDiv {
+
+}
+
+.kollImg {
+    height: 30px;
+    width: 30px;
+    left: 0;
+    top: 0;
+    margin: 0px;
+}
+
+#trikkImg {
+
+}
+
+#tbaneImg {
+
+}
+
+#bussImg {
+
+}
+
+.kollDiv {
+    width: 220px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.boks {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    text-align: center;
+    padding: 8px;
+    margin: 2px 0 0 2px;
+    border: solid 2px #ffffff;
+    width: 29px;
+    font-size: 1em;
+    font-family: 'Graphik-Semibold', arial !important;
+    font-weight: 600 !important;
+    color: white;
+    border-radius: 5px;
+}
+
+.trikkBoksContainer {
+
+}
+
+.tbaneBoksContainer {
+
+}
+
+.bussBoksContainer {
+
+}
+
+
+.trikkBoksContainer .boks {
+    height: auto;
+    background-color: #123466;
+}
+
+.bussBoksContainer .boks {
+    height: auto;
+    background-color: #00aaaa;
+}
+
+.tbaneBoksContainer .boks {
+    height: auto;
+    background-color: #214d93;
+}
+
 #map{
     position: absolute;
     height:100%;
